@@ -1,0 +1,50 @@
+<div class="pad30px" *ngIf="src">
+    <p class="text-center pad-b20px">
+        <img class="autowidth" src="assets/images/icon/refer-a-owner-2-white-icon.svg" alt="Refer a owner icon" />
+    </p>
+    <form method="post" (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+        <div class="row">
+            <div class="grid12-xs">
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">House Owner Name</label>
+                    <input class="form-control" type="text" ngControl="honame" id="honame" value="" placeholder="Type house owner name"
+                    />
+                </div>
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">Houser Owner Email ID (Optional)</label>
+                    <input class="form-control" type="text" ngControl="hoemail" id="hoemail" value="" placeholder="Type house owner email (optional)"
+                    />
+                </div>
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">House Owner Mobile No</label>
+                    <input class="form-control" type="text" ngControl="homobileno" id="homobileno" value="" placeholder="Type house owner mobile no"
+                    />
+                </div>
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">Address</label>
+                    <input class="form-control" type="text" ngControl="hoaddress" id="hoaddress" value="" placeholder="Type house owner address"
+                    />
+                </div>
+                <div class="row">
+                    <div class="grid6-sm">
+                        <div class="control-set input-a grey-to-white rounded">
+                            <label class="form-label sr-only text theme">City</label>
+                            <input class="form-control" type="text" ngControl="hocity" id="hocity" value="" placeholder="City"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid6-sm">
+                        <div class="control-set input-a grey-to-white rounded">
+                            <label class="form-label sr-only text theme">Pincode</label>
+                            <input class="form-control" type="text" ngControl="hopincode" id="hopincode" value="" placeholder="Pincode"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-set">
+                    <button type="submit" class="button theme rounded stretch large">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

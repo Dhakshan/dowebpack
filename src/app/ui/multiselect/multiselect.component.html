@@ -1,0 +1,28 @@
+<!--// 
+src as a object input to play this control
+-->
+<div *ngIf="src.sb" class="sb sb-{{src.theme||'white'}} rounded" [ngClass]="src.sb.open(src)" (mouseout)="src.sb.mouseout($event,src)">
+    <label class="sb-input">
+        <input class="form-control" [attr.id]="src.id" [(value)]="src.sb.value" [attr.placeholder]="src.placeholder" (mouseover)="src.sb.watch=true;" (keyup)="src.sb.keyup($event,src)" (focus)="src.sb.focus($event,src)" (blur)="src.sb.bindvalue($event,src)"  autocomplete="off"/>
+        <button type="button" class="sb-button rounded sb-caret" (click)="src.sb.dropDown($event,src);" (mouseover)="src.sb.watch=true;" [hidden]="!src.sb.isAnySelected">
+            <span><span class="fa fa-angle-up"></span></span>
+            <span><span class="fa fa-angle-down"></span></span></button>
+        </label>
+    <div class="sb-option-list" *ngIf="src.sb.data && src.sb.data.option" (mouseover)="src.sb.mouseover($event,src)" (mouseout)="src.sb.mouseout($event,src)">
+        <ul>
+            <li class="sb-selected-item" *ngIf="src.sb.data.option">
+                <label class="sb-pill pad2px radius" *ngFor="let opt of src.sb.filterBy(src.sb.data.option,src,[{name:'selected',value:true}])" >
+                    {{opt.value}}<a href="#" class="sb-pill-close" (click)="src.sb.optDelete($event,opt,src)"><span class="fa fa-remove"></span></a>
+                </label>
+            </li>
+            <li class="sb-option-item" *ngFor="let opt of src.sb.filter(src)">
+                <label class="sb-option" (click)="src.sb.optClick($event,opt,src)">
+                    {{opt.value}}
+                </label>
+            </li>
+            <li *ngIf="src.sb.suggestPlaceholder(src)">
+                <p><span class="opacity50">Location not found</span> <a class="link theme inlineblock" href="#" (click)="src.common.modalOpen({event:$event,name:'suggestLocationModal',show:true})" >Suggest Us</a></p>
+            </li>
+        </ul>
+    </div>
+</div>

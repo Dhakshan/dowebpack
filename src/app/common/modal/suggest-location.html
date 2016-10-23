@@ -1,0 +1,69 @@
+<!--//modal reference
+    src.something...
+-->
+<div class="bg theme" *ngIf="src">
+	<div class="row row-nopad no-padding relative">
+		<div class="grid5-sm">
+			<div class="pad30px">
+				<p class="pad30px"></p>
+				<p>Right now we are serving at</p>
+				<h4 class="lead h4 margin-b20px uppercase">17 Location</h4>
+				<h5 class="lead h5 pad-y20px">
+					<span class="block">We will expand our services in other localities very soon.</span>
+				</h5>
+				<p class="line0space2h">
+					Provide required location details. We will notify you once we expand our services to your desired location.
+				</p>
+				<p class="pad30px"></p>
+			</div>
+		</div>
+		<div class="grid7-sm relative bg secondary">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h4 class="lead h4">{{src.title}}</h4>
+					<button type="button" class="modal-close" (click)="src._this.modalClose({name:src.name,show:false,other:false})">
+                        <span class="modal-close-icon">&times;</span>
+                    </button>
+				</div>
+			</div>
+			<div class="pad30px margin-x10px" *ngIf="src.form">
+				<form method="post" (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+					<div class="row">
+						<div class="grid12-xs">
+							<div class="control-set">
+								<label class="form-label text theme text-italic">Enter Your Desired Location</label>
+								<div class="input-a grey-to-white rounded">
+									<input autocomplete="off" class="form-control rounded" type="text" ngControl="location" id="location" value="" placeholder="Type location" />
+								</div>
+							</div>
+							<div class="control-set">
+								<label class="form-label text theme text-italic">Name</label>
+								<div class="input-a grey-to-white rounded">
+									<input autocomplete="off" class="form-control rounded" type="text" ngControl="name" id="name" value="" placeholder="Type your name"
+									/>
+								</div>
+							</div>
+							<div class="control-set">
+								<label class="form-label text theme text-italic">Email ID</label>
+								<div class="input-a grey-to-white rounded">
+									<input autocomplete="off" class="form-control rounded" type="text" ngControl="email" id="email" value="" placeholder="Type your email"
+									/>
+								</div>
+							</div>
+							<div class="control-set">
+								<label class="form-label text theme text-italic">Mobile No</label>
+								<div class="input-a grey-to-white rounded">
+									<input autocomplete="off" class="form-control rounded" type="text" ngControl="mobileno" id="mobileno" value="" placeholder="Type your mobile no"
+									/>
+								</div>
+							</div>
+							<div class="control-set margin-y30px">
+								<button type="submit" class="button theme rounded stretch large">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

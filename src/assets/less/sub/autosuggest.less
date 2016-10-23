@@ -1,0 +1,182 @@
+//auto complete component
+.autosuggest{
+    position:relative;
+    &,*{
+        .transition_(all 0.5s ease);
+    }
+    
+    .autosuggest-input{
+        padding : 3px 3px;
+        .form-control{
+            width : 90%;
+            margin:0 5%;
+           border-width: 0 0 1px 0;
+           border-color : transparent;
+           padding : 11px 20px 11px;
+           background-color : transparent;
+        }
+        .input-label{
+            left : 35px;
+        }
+        .input-label-visible{
+            .form-control{
+                padding : 15px 20px 7px;
+            }
+        }
+    }
+    .autosuggest-list{
+        display : none;
+        padding:40px 10px 10px; margin:0 0;
+        position: absolute;
+        left:0; right:0;
+        top: auto;
+        background-color : inherit;
+        .border-radius(20px);
+        .opacity(0);
+        li{
+            label{
+                display: block;
+                padding : 8px 12px;
+                .border-radius(30px);
+            }
+        }
+    }
+    .autosuggest-selected-list ul,.autosuggest-list{
+        list-style:none;
+    }
+    .autosuggest-selected-list{
+        position: relative;
+        .autosuggest-selected-count{
+            display : block;
+            padding : 10px 20px;
+            position: relative;
+            &:after{
+                content:"";
+                width : 100%;
+                position : absolute;
+                left:0; right:0; bottom : 0;
+                border-bottom : 1px solid transparent;
+            }
+        }
+        ul{
+            display : none;
+            position : absolute;
+            top:auto;
+            left:0; right:0;
+            padding : 10px;
+            .border-radius(20px);
+            li{
+                display : block;
+                padding : 10px 10px 10px 10px;
+                position : relative;
+                &:not(:last-child){
+                    border-bottom : 1px solid fade(@themeSecondaryBg,20);
+                }
+                .autosuggest-selected-item-text{
+                    display : block;
+                    margin-right:30px;
+                }
+                .autosuggest-selected-item-remove-icon{
+                    position : absolute;
+                    right : 0; top : 50%;
+                    margin-top : -13px;
+                    .border-radius(50%);
+                    display : inline-block;
+                    text-align: center;
+                    width : 25px; height : 25px;
+                    .fa{
+                        &,&:before{
+                            line-height: 23px;
+                        }
+                    }
+                    color : @white;
+                }
+                &:hover{
+                    .autosuggest-selected-item-remove-icon{
+                        background-color : fade(@themeSecondaryBg,20);
+                    }
+                }
+            }
+        }
+        background-color : transparent;
+        color : @white;
+        .autosuggest-selected-count{
+            .border-radius(20px 20px);
+            &:hover,&:focus{
+                background-color : @themeBg;    
+            }
+        }
+        &.autosuggest-selected-o{
+            .border-radius(20px 20px 0px 0px);
+            .autosuggest-selected-count{
+                &:after{
+                    border-bottom-color:fade(@themeSecondaryBg,20);
+                }
+            }
+            ul{
+                display : block;
+                .border-radius(0px 0px 20px 20px);
+            }
+            &{
+                background-color : @themeBg;
+                color : @white; 
+            }
+            ul{
+                background-color : @themeBg;
+                color : @white; 
+            }
+        }
+    }
+    &.autosuggest-o{
+        .autosuggest-list{
+            padding-top:10px;
+            display : block;
+            .opacity(1);
+        }
+    }
+    &.autosuggest-theme-alt{
+        &.rounded{
+            .border-radius(50px);
+        }
+        .form-control{
+            &,&:hover,&:focus{
+                .box-shadow(none);
+            }
+        }
+    }
+    &.autosuggest-o.autosuggest-theme-alt{
+        @showradius : 20px;
+        .border-radius(@showradius @showradius 0px 0px);
+        .autosuggest-list{
+            .border-radius(0px 0px @showradius @showradius);
+        }
+    }
+    //themes
+    &.autosuggest-theme-alt{
+        background-color : @themeSecondaryBg;
+        .form-control{
+            border-bottom-color :  fade(@white,10);
+            &:hover,&:focus{
+                border-bottom-color :  fade(@white,20);
+            }
+        }
+        &:hover{
+            border-color : fade(@white,10);
+        }
+        .autosuggest-list{
+            background-color : @themeSecondaryBg;
+            li{
+                label{
+                    &,&:focus{
+                        background-color : transparent;
+                        color : @white;
+                    }
+                    &:hover{
+                        background-color : @themeBg;
+                    }
+                }
+            }
+        }
+    }
+    
+}

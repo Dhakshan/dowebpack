@@ -1,0 +1,48 @@
+@cubicbezier1: cubic-bezier(0,0.3,0.2,0.1);
+.transitions(@selector){
+    @{selector}{
+        .transition_(all 0.3s @cubicbezier1);
+    }
+}
+
+html,body,input,button,textarea,select,label,td,tr,table{
+    font-family: "Montserrat";
+}
+.lead{
+    &.h1,&.h2,&.h3,&.h4,&.h5,&.h6{
+        font-family: "Montserrat";
+    }
+}
+.font-bold{
+    &:extend(.font-bold);
+}
+@mediawidth : 98%;
+@media (min-width : 1300px){
+    .desktop{
+        width : @mediawidth;
+    }
+}
+@media (min-width : 1400px){
+    .desktop{
+        width : @mediawidth;
+    }
+}
+@media (min-width : 1500px){
+    .desktop{
+        width : @mediawidth;
+    }
+}
+@media (min-width : 1600px){
+    .desktop{
+        width : @mediawidth;
+    }
+}
+@media (min-width : 1600px){
+    .desktop{
+        width : @mediawidth;
+    }
+}
+//section
+.section-article{
+    padding :5% 30px; 
+}

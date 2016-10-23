@@ -1,0 +1,27 @@
+<svg id="hourglass_icon" data-name="hourglass icon" xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rounded_Rectangle_720" data-name="Rounded Rectangle 720" class="cls-1" x="20.594" y="18.188" width="28.813" height="4.813" rx="2.4" ry="2.4"/>
+  <path id="Rounded_Rectangle_720_copy_3" data-name="Rounded Rectangle 720 copy 3" class="cls-2" d="M44.6,23c0,7.586-6.364,9.405-6.364,11.926,0,2.309,6.364,4.487,6.364,12.074-1.431-.131-2.849,0-6.364,0H32.6c-3.535,0-4.961-.131-6.4,0,0-7.586,6.4-9.765,6.4-12.074,0-2.521-6.4-4.34-6.4-11.926H44.6Z"/>
+  <rect id="Rounded_Rectangle_720_copy" data-name="Rounded Rectangle 720 copy" class="cls-1" x="20.594" y="47" width="28.813" height="4.813" rx="2.4" ry="2.4"/>
+  <path class="cls-3" d="M31,28.6h8.8l-1.6,3.2s-1.567,2.4-3.044,2.4c-1.314,0-2.556-2.4-2.556-2.4Z"/>
+  <path id="Rectangle_12_copy_2" data-name="Rectangle 12 copy 2" class="cls-2" d="M29.4,45.4h12s-1.767-8-6.244-8S29.4,45.4,29.4,45.4Z"/>
+</svg>

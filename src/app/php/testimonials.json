@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "author": "DO125",
+            "location": "Mylapore",
+            "shortdesc": "Directowners looks to bridge this gap for all the tenant who are looking for rental properties. More over I very much like their customer support. I strongly recommend directowners to my known circle.",
+            "published": "16 May 2016",
+            "url": "/testimonials/DO0",
+            "ref": "DO0"
+        },
+        {
+            "id": 1,
+            "author": "DO132",
+            "location": "Anna Nagar",
+            "shortdesc": "I have referred my existing property owner to directowners and to my surprise. I have received 100% cashback of my subscription as rewards. I am happy that I rented a flat wihout any payment. Thank you Directowners!",
+            "published": "30 March 2016",
+            "url": "/testimonials/DO1",
+            "ref": "DO1"
+        },
+        {
+            "id": 2,
+            "author": "DO165",
+            "location": "KK Nagar",
+            "shortdesc": "I bought package and I contacted all the 17 owner for testing abd found all property belongs to Real. Genuiue Owners. Really they are doing great.",
+            "published": "21 Feb 2016",
+            "url": "/testimonials/DO2",
+            "ref": "DO2"
+        },
+        {
+            "id": 3,
+            "author": "DO193",
+            "location": "Ashok Nagar",
+            "shortdesc": "I used my property in directowners recently. I received only few call but all are from Tenants only. The best part is that Directowners don't let others to know my contact number and I am happy with privacy. It's good website for owners!",
+            "published": "02 Feb 2016",
+            "url": "/testimonials/DO3",
+            "ref": "DO3"
+        },
+        {
+            "id": 4,
+            "author": "DO218",
+            "location": "Choolai",
+            "shortdesc": "Directowners prevent from unwanted calls and persons",
+            "published": "15 Jan 2016",
+            "url": "/testimonials/DO4",
+            "ref": "DO4"
+        }
+    ]
+}

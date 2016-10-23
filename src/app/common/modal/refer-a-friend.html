@@ -1,0 +1,26 @@
+<div class="pad30px" *ngIf="src">
+    <p class="text-center pad-b20px">
+        <img class="autowidth" src="assets/images/icon/refer-a-friend-2-white-icon.svg" alt="Refer a friend icon" />
+    </p>
+    <form method="post"  (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+        <div class="row">
+            <div class="grid12-xs">
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">Friend Name</label>
+                    <input class="form-control" type="text" ngControl="friendname" id="friendname" value="" placeholder="Type friend name" />
+                </div>
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">Friend Email ID</label>
+                    <input class="form-control" type="text" ngControl="friendemail" id="friendemail" value="" placeholder="Type friend email" />
+                </div>
+                <div class="control-set input-a grey-to-white rounded">
+                    <label class="form-label sr-only text theme">Friend Mobile No</label>
+                    <input class="form-control" type="text" ngControl="friendmobileno" id="friendmobileno" value="" placeholder="Type friend mobile no" />
+                </div>
+                <div class="control-set">
+                    <button type="submit" class="button theme rounded stretch large" >Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

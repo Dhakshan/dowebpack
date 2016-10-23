@@ -1,0 +1,106 @@
+<section class="bg footer relative" *ngIf="cs.footerLinks">
+        <div class="desktop scroll-shows">
+            <div class="row relative no-padding row-as-table-sm stretch sidebar-grid">
+                <div class="grid8-sm">
+                    <div class="sidebar-pad">
+                        <div class="row margin-y50px sidebar-grid">
+                            <div class="grid4-smd">
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Site Links</h6>
+                                    <ul class="list-nostyle">
+                                        <li *ngFor="let link of cs.footerLinks.sitelinks">
+                                            <a class="link white-fade"  title="{{link.title}}">{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Subscribers</h6>
+                                    <ul class="list-nostyle row row-nopad">
+                                        <li class="grid6-xs" *ngFor="let link of cs.footerLinks.subscribers">
+                                            <a class="link white-fade"  title="{{link.title}}" (click)="cs.modalOpen({event:$event,name:link.event,show:true,other:false})">{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid4-smd">
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">For Post</h6>
+                                    <ul class="list-nostyle">
+                                        <li *ngFor="let link of cs.footerLinks.forpost">
+                                            <a class="link white-fade"  title="{{link.title}}">{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Buyers/Owners</h6>
+                                    <ul class="list-nostyle">
+                                        <li *ngFor="let link of cs.footerLinks.buyerOwners">
+                                            <a class="link white-fade"  title="{{link.title}}"  *ngIf="!link.event">{{link.menu}}</a>
+                                            <a class="link white-fade" href="#"  title="{{link.title}}" *ngIf="link.event" (click)="cs.modalOpen({event:$event,name:link.event,show:true,other:false})">{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid4-smd">
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Explore</h6>
+                                    <ul class="list-nostyle">
+                                        <li *ngFor="let link of cs.footerLinks.explore">
+                                            <a class="link white-fade"  title="{{link.title}}">{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Follow Us</h6>
+                                    <ul class="list-nostyle row">
+                                        <li class="grid6-xs" *ngFor="let link of cs.footerLinks.socials">
+                                            <a class="link white-fade"  title="{{link.title}}"><span class="fa {{link.icon}} margin-r10px"></span>{{link.menu}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid4-sm bg black2">
+                    <div class="section-fit">
+                        <div class="section-fit-inner">
+                            <div class="pad30px liketable center">
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Follow Us</h6>
+                                    <ul class="list-nostyle row">
+                                        <li class="grid3-xs">
+                                            Call
+                                        </li>
+                                        <li class="grid9-xs">
+                                            <p class="row"><span class="grid3-xs">MO:</span><span class="grid9-xs">+91 94444 12345</span></p>
+                                            <p class="row"><span class="grid3-xs">MO:</span><span class="grid9-xs">044 2434 0508</span></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footlist">
+                                    <h6 class="lead h6 text theme">Contact Us</h6>
+                                    <ul class="list-nostyle row">
+                                        <li class="grid4-xs">
+                                            Mail Us
+                                        </li>
+                                        <li class="grid8-xs">
+                                            <a class="link white-fade" href="mailto:info@directowners.com" title="info@directowners.com"><span class="fi-label">info@directowners.com</span></a>
+                                        </li>
+                                    </ul>
+                                    <p class="pad-t50px">
+                                        <a class="button theme theme-fade rounded" title="Send Your Queries"><span class="pad-x20px">Send Your Queries</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="bg black3 footer text-center relative">
+    <div class="desktop copyright">
+        <p>&copy; 2016 Directowners.com</p>
+    </div>
+</section>

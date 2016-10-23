@@ -1,0 +1,24 @@
+<section class="bg theme theme-alt relative" *ngIf="cs.mostViewed">
+    <div class="section-article">
+        <div class="desktop">
+            <h5 class="lead h5 margin-b20px">Most Viewed Property</h5>
+            <div class="row list-v1">
+                <div class="grid4-sm" *ngFor="let prop of cs.mostViewed.list let p=index">
+                    <a class="list-v1-link" href="{{prop.url}}" title="{{prop.title}}">
+                        <span class="list-v1-img background">
+                            <img [src]="prop.photo" alt="{{prop.title}}" />
+                        </span>
+                        <span class="list-v1-label">{{prop.title}}</span>
+                    </a>
+                </div>
+                <div class="grid4-sm">
+                    <p class="margin-y15px">
+                        <a href="/" class="button outlined secondary-alt radius">
+                            <span class="pad-x20px">View More</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

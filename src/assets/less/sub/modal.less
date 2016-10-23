@@ -1,0 +1,86 @@
+.modal{
+    color : @themeSecondaryBg;
+    overflow-y: auto;
+    .backdrop{
+        position : fixed;
+    }
+    .modal-body{
+        height: 100%;
+    }
+    .modal-close{
+        position : absolute;
+        top:0;
+        right : 0;
+        border:0;
+        &,&:hover,&:focus{
+            background-color : transparent;
+        }
+        &,&:focus{
+            color : fade(@white,70);
+        }
+        &:hover{
+            color : fade(@white,100);
+            // .fa{
+            //     .transform_(rotate(180deg));
+            // }
+        }
+    }
+    .modal-container{
+        .box-shadow(0 5px 25px fade(@black,70));
+        .modal-title{
+            padding : 20px 15px;
+            .lead{
+                margin:0;
+                padding : 0;
+            }
+        }
+        &.full-height{
+            height : 100%;
+        }
+    }
+    &.open.in{
+        .modal-container{
+            .opacity(1);
+            padding:0;
+        }
+    }
+    &.in{
+        .modal-container{
+             padding:30px;
+            .opacity(0);
+        }
+    }
+    .modal-stretch{
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+    }
+    .modal-fit{
+        display:table;
+        width:100%; height:100%;
+        .modal-fit-inner{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    &.secondary{
+        .modal-container{
+            background-color : @themeSecondaryBg;
+            color : @white;
+        }
+        .backdrop{
+            background-color : fade(@themeBg,100);
+        }
+    }
+    &.theme{
+        .modal-container{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .backdrop{
+            background-color : fade(@themeSecondaryBg,100);
+        }
+    }
+}

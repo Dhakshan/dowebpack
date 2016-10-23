@@ -1,0 +1,40 @@
+<!--//modal reference
+    src.something...
+-->
+<div *ngIf="src">
+	<form class="pad20px" (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+		<div class="row">
+			<div class="grid12-xs">
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Email ID</label>
+					<input autocomplete="off" type="text" class="form-control" ngControl="email" id="email" placeholder="Email id" value="" />
+				</div>
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Password</label>
+					<input autocomplete="off" type="password" class="form-control" ngControl="password" id="password" placeholder="Password"
+						value="" />
+				</div>
+				<div class="control-set">
+					<div class="row row-as-table-xsm center stretch">
+						<div class="grid6-xsm nowrap">
+							<div class="checkbox white no-padding">
+								<label class="" for="rememberme">Remember Me</label>
+								<input type="checkbox" autocomplete="off" class="form-control" (change)="rememberme.checked=$event.target.checked" [checked]="rememberme.checked"
+									id="rememberme" value="y" #rememberme>
+								<span class="checkbox-square" [ngClass]="(rememberme.checked)?'active':''"></span></div>
+						</div>
+						<div class="grid6-xsm text-right-xsm"><a href="#" class="link theme border-true" (click)="src._this.modalOpen({event:$event,name:'forgotPasswordModal',show:true,other:false})">Forgot Password</a></div>
+					</div>
+				</div>
+				<div class="control-set">
+					<p class="margin-y20px">
+						<button type="submit" class="button theme theme-white rounded medium stretch">Submit</button>
+					</p>
+					<p class="text-center">
+						Don't have an account? <a href="#" class="link theme" (click)="src._this.modalOpen({event:$event,name:'signupModal',show:true,other:false})">Register</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

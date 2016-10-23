@@ -1,0 +1,39 @@
+.section-article {
+  z-index: 1;
+}
+.s1-bg {
+  z-index: 0;
+}
+.home,
+.section-article {
+  z-index: 1;
+}
+.search-sidebar {
+  z-index: 102;
+}
+.home.header,
+.cmn.header {
+  z-index: 103;
+}
+.sidebar-desktop {
+  z-index: 103;
+}
+.togglemenu-btn {
+  z-index: 104;
+}
+.flyout {
+  z-index: 200;
+}
+.modal {
+  z-index: 210;
+}
+.modal .modal-close {
+  z-index: 130;
+}
+.modal .backdrop {
+  z-index: -1;
+}
+.siteloader,
+.progress-loader-a {
+  z-index: 211;
+}

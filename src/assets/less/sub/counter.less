@@ -1,0 +1,86 @@
+//counter
+.counter{
+    &,*{
+        .transition_(all 0.5s ease);
+    }
+    .counter-count-icon{
+        width : 80px;
+        margin:0 auto;
+    }
+    .counter-count{
+        margin:0 auto;
+        display : table;
+        .count-cell{
+            display : table-cell;
+            vertical-align:  middle;
+            text-align: center;
+        }
+    }
+    .counter-count-digit{
+        font-size : 35px;
+        padding : 0 3px;
+        height:30px;
+        display: block;
+        margin:0 auto;
+        overflow:hidden;
+        @spansize : 30px;
+        &,*{
+            .transition_(all 1s linear);
+        }
+        > span{
+            display : table;
+            width :100%; height:100%;
+            position: relative;
+        }
+        &.active0 {
+            > span:first-child{
+                margin-top:0;
+            }
+        }
+        &.active1 {
+            > span:first-child{
+                margin-top:-@spansize*1;
+            }
+        }
+        &.active2 {
+            > span:first-child{
+                margin-top:-@spansize*2;
+            }
+        }
+        &.active3 {
+            > span:first-child{
+                margin-top:-@spansize*3;
+            }
+        }
+        &.active4 {
+            > span:first-child{
+                margin-top:-@spansize*4;
+            }
+        }
+        &.active5 {
+            > span:first-child{
+                margin-top:-@spansize*5;
+            }
+        }
+        &.active6 {
+            > span:first-child{
+                margin-top:-@spansize*6;
+            }
+        }
+        &.active7 {
+            > span:first-child{
+                margin-top:-@spansize*7;
+            }
+        }
+        &.active8 {
+            > span:first-child{
+                margin-top:-@spansize*8;
+            }
+        }
+        &.active9 {
+            > span:first-child{
+                margin-top:-@spansize*9;
+            }
+        }
+    }
+}

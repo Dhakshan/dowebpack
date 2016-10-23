@@ -1,0 +1,1370 @@
+//form
+.input-label{
+    font-size : 9px;
+    position:absolute;
+    left:11px;
+    top:-3px;
+    .opacity(0);
+}
+.input-label-visible{
+    .input-label{
+        .opacity(0.5);
+    }
+}
+//form control theme
+.input{
+    &:not(.outline){
+        border:0 none;
+    }
+    &.white:not(.outline){
+        .form-control{
+            color : @themeSecondaryBg;
+            background-color : @white;
+            &:hover,&:focus{
+                background-color : fade(@white,90);
+            }
+        }
+    }
+    &.theme:not(.outline){
+        .form-control{
+            background-color : @themeBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : darken(@themeBg,10);
+            }
+        }
+    }
+    &.secondary:not(.outline){
+        .form-control{
+            background-color : @themeSecondaryBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : lighten(@themeSecondaryBg,10);
+            }
+        }
+    }
+    &.outline{
+        .form-control{
+            border:2px solid ;
+            background-color : transparent;
+            .box-shadow(none);
+        }
+        &.white{
+            .form-label,.form-control{
+                color : @white;
+            }
+            .form-control{
+                border-color : fade(@white,50);
+                &:hover{
+                    border-color : fade(@white,80);
+                } 
+                &:focus{
+                    border-color : fade(@white,20);
+                }
+            }
+            .placeholder(@white);
+        }
+        &.secondary{
+            .form-label,.form-control{
+                color : @themeSecondaryBg;
+            }
+            .form-control{
+                border-color : fade(@themeSecondaryBg,50);
+                &:hover{
+                    border-color : fade(@themeSecondaryBg,80);
+                } 
+                &:focus{
+                    border-color : fade(@themeSecondaryBg,100);
+                }
+            }
+            .placeholder(@themeSecondaryBg);
+        }
+        &.theme{
+            .form-label,.form-control{
+                color : @themeBg;
+            }
+            .form-control{
+                border-color : fade(@themeBg,50);
+                &:hover{
+                    border-color : fade(@themeBg,80);
+                } 
+                &:focus{
+                    border-color : fade(@themeBg,100);
+                }
+            }
+            .placeholder(@themeBg);
+        }
+    }
+}
+//form control theme end
+
+.input-a{
+    padding : 10px 20px;
+    .form-control{
+        background-color : transparent;
+        border-width: 0;
+        color : @white;
+        &,&:focus,&:hover{
+            .box-shadow(none);
+        }
+    }
+    &.theme{
+        background-color:@themeBg;
+        color : @white;
+        &,.form-control{
+            color : @white;
+        }        
+    }
+    &.secondary{
+        background-color:@themeSecondaryBg;
+        &,.form-control{
+            color : @white;
+        }
+    }
+    &.white{
+        background-color:@white;
+        &,.form-control{
+            color : @themeSecondaryBg;
+        }
+        &:hover{
+            background-color : fade(@white,30);
+            &,.form-control{
+                color : @white;
+            }   
+        }
+    }
+    &.grey-to-white{
+        background-color:#292929;
+        &,.form-control{
+            color : @white;
+        }
+        &:hover,&:focus{
+            background-color : lighten(#292929,10);
+            // &,.form-control{
+            //     color : @themeSecondaryBg;
+            // }   
+        }
+    }
+}
+.input-captcha-set{
+    padding-right:10px;
+}
+.input-captcha{
+    position : relative;
+    background-color : @white;
+    overflow:hidden;
+    .box-shadow(inset 0 0 5px fade(@black,30));
+    .input-captcha-bg{
+        width : 75px;
+        padding : 5px;
+        margin-left:10px;
+    }
+    .input-captcha-reload{
+        position : absolute;
+        display : block;
+        right : 0;
+        top : 0;
+        margin:3px 5px;
+        text-align: center;
+        padding:14px 10px 15px;
+        line-height:0;
+        .fa{
+            line-height:0 !important;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        &,&:focus{
+            background-color : @themeBg;
+            color : @white;
+        }
+        &:hover{
+            background-color : @themeSecondaryBg;
+        }
+    }
+}
+
+.input-btn-group{
+    position: relative;
+    .form-control{
+        padding : 15px 15px 15px;
+        .border-radius(50px);
+        &,&:hover,&:focus{
+            border:0 none;
+        }
+        &:focus{
+            .box-shadow(none);
+        }
+    }
+    .button{
+        position : absolute;
+        top : 50%;
+        right : 4px;
+        margin-top:-18px;
+    }
+    &.b{
+        .form-control, .form-control.bshadow{
+            border-color :  #ddd;
+            &,&:hover,&:focus{
+                border-width : 1px;
+                border-style : solid;
+            }
+        }
+    }
+    &.white{
+        .ibg-border-apply(fade(@themeSecondaryBg,20),@themeSecondaryBg);
+    }
+    &.secondary{
+      .ibg-border-apply(@themeSecondaryBg,@white);
+    }
+    &.secondary-alt{
+        .ibg-border-apply(@themeBg,@themeBg);
+    }
+    &.theme{
+      .ibg-border-apply(@themeBg,@white);  
+    }
+    &.theme-alt{
+      .ibg-border-apply(@themeSecondaryBg,@themeSecondaryBg);
+    }
+}
+.ibg-border-apply(@bcolor,@color){
+    .form-control{
+        color : @color;
+    }
+    &.b{
+        .form-control, .form-control.bshadow{
+            border-color : @bcolor;
+        }
+    }
+}
+*.bshadow{
+    @bshadow : inset 0 1px 1px @white,inset 0 2px 3px fade(@black,10); 
+    .box-shadow(@bshadow);
+    &,&:hover,&:focus{
+        border:0 none;
+    }
+    &:hover{
+        @bshadow : inset 0 2px 3px fade(@black,10); 
+        .box-shadow(@bshadow);
+    }
+    &:focus{
+        @bshadow : inset 0 1px 3px fade(@black,20); 
+        .box-shadow(@bshadow) !important;
+    }
+}
+
+//button
+.button{
+    border:0 none;
+    padding : 10px 10px;
+    &.theme{
+        &,&:focus{
+            background-color : @themeBg;
+            color : @white;            
+        }
+        &:hover{
+            background-color: darken(@themeBg,10);
+        }
+        &.theme-alt{
+            &:hover{
+                background-color: @themeSecondaryBg;
+            }
+        }
+        &.theme-white{
+            &:hover{
+                background-color: @white;
+                color : @themeSecondaryBg;
+            }
+        }
+    }
+    &.theme-fade{
+        &,&:focus{
+            background-color : fade(@themeBg,30);  
+        }
+    }
+    
+    &.secondary{
+        &,&:focus{
+            background-color : @themeSecondaryBg;
+            color : @white;            
+        }
+        &:hover{
+            background-color : lighten(@themeSecondaryBg,10);
+        }
+        &.secondary-alt{
+            &:hover{
+                background-color: @themeBg;
+            }
+        }
+        &.secondary-white{
+            &:hover{
+                background-color: @white;
+                color : @themeSecondaryBg;
+            }
+        }
+    }
+    &.grey{
+        background-color : #7c7c7c;
+        color : @white;
+        &:hover,&:focus{
+            background-color : @themeSecondaryBg;
+        }
+    }
+    &.grey1{
+        background-color : darken(@grey1,0);
+        color : @white;
+        &:hover,&:focus{
+            background-color : darken(@grey1,5);
+        }
+    }
+    .button-icon{
+        padding : 5px 10px;
+    }
+    &.outlined{
+        border-width : 2px;
+        border-style : solid;
+        &.secondary{
+            .outlineFn(~".secondary",@themeSecondaryBg,@themeBg,@white);
+        }
+        &.secondary-alt{
+            .outlineFn(~".secondary-alt",@themeSecondaryBg,@themeSecondaryBg,@white);
+        }
+        &.secondary-white{
+            .outlineFn(~".secondary-white",@themeSecondaryBg,@white,@themeSecondaryBg);
+        }
+        &.secondary-white-theme{
+            .outlineFn(~".secondary-white-theme",@themeSecondaryBg,@white,@themeBg);
+        }
+        &.theme{
+           .outlineFn(~".theme",@themeBg,@themeSecondaryBg,@white); 
+        }
+        &.white{
+            .outlineFn(~".white",@white,@themeSecondaryBg,@white);
+        }
+        &.white-alt{
+            .outlineFn(~".white",@white,@themeBg,@white);
+        }
+        &.white-alt-fade{
+            .outlineFn(~".white-alt-fade",fade(@white,50),@themeBg,@white);
+        }
+        &.white-fade{
+            .outlineFn(~".white",fade(@white,20),@white,@themeSecondaryBg);
+        }
+        &.lightgrey{
+           border-color : fade(@black,30);
+           color : @themeSecondaryBg;
+           background-color : transparent;
+           &:hover,&:focus{
+               background-color : @themeSecondaryBg;
+               border-color : @themeSecondaryBg;
+               color : @white;
+           } 
+        }
+    }
+    
+    &.fill-stroke{
+        border-width : 4px;
+        border-style : solid;
+        &.white{
+            &,&:focus{
+                background-color : @white;
+                color : @themeSecondaryBg;
+            }
+            &.white-alt{
+                border-color : @themeSecondaryBg;
+                &:hover{
+                    background-color : @themeSecondaryBg;
+                    color : @white;
+                }
+            }
+        }
+        &.secondary{
+            &,&:focus{
+                background-color : @themeSecondaryBg;
+                color : @white;
+            }
+            &.secondary-alt{
+                border-color : @white;
+                &:hover{
+                    background-color : @white;
+                    color : @themeSecondaryBg;
+                }
+            }
+        }
+    }
+}
+.outlineFn(@name,@a,@b,@c){
+        background-color : transparent;
+        color : @a;
+        border-color : @a;
+        .button-icon{
+            background-color : @a;
+            color : @c;
+        }
+        &:hover{
+            background-color : @b;
+            border-color : @b;
+            color : @c;
+            .button-icon{
+                background-color : @c;
+                color : @b;
+            }
+        }
+        &@{name}-alt{
+            .button-icon{
+                color : @b;
+            }
+            &:hover{
+                color : @a;
+                .button-icon{
+                    background-color : @a;
+                    color : @b;
+                }
+            }
+        }
+}
+
+.common-form-error{
+  margin:0;
+  padding : 0px 10px;
+  padding-right : 30px;
+  position:fixed;
+  z-index : @zindexhigh+2;
+  min-width: 300px;
+  max-width: 100%;
+  .opacity(0);
+  .box-shadow(0px 3px 10px fade(@black,30));
+    overflow:hidden;
+    .error-close{
+        display : block;
+        padding : 5px;
+        right : 5px; top:50%;
+        margin-top : -18px;
+        .transform_(rotate(0deg));
+        &:hover{
+        .transform_(rotate(180deg));
+        }
+    }
+    .form-error{
+        position:relative;
+        margin-top : -100%;
+        padding : 15 20px;
+    }
+  &.error-in{
+      height : auto;
+    .opacity(1);
+    .form-error{
+        margin-top : 0;
+    }
+  }
+  &.full{
+      left:0;
+      right:0;
+      top:0;
+      text-align: center;
+  }
+  &.topleft,&.topright,&.bottomleft,&.bottomright{
+      margin : 10px;
+      text-align: left;
+  }
+  &.topleft{
+    top:0;left:0;
+  }
+  &.topright{
+    top:0;right:0;
+  }
+  &.bottomleft{
+    bottom:0;left:0;
+  }
+  &.bottomright{
+    bottom:0;right:0;
+  }
+  .timer-bg{
+    position:absolute;
+    bottom : 0;
+    left:0;
+    width : 0%;
+    height:2px;
+    z-index : @zindexhigh+3;
+  }
+  &.like-error{
+    background-color : @commonerrorbg;
+    
+    &,&:focus{
+        color : @white;
+    }
+    .timer-bg{
+        background-color : fade(@white,80);
+    }
+  }
+  &.like-theme{
+    background-color : @themeBg;
+    &,&:focus{
+        color : @white;
+    }
+    .timer-bg{
+        background-color : fade(@white,80);
+    }
+  }
+  &.like-secondary{
+    background-color : @themeSecondaryBg;
+    &,&:focus{
+        color : @white;
+    }
+    .timer-bg{
+        background-color : fade(@white,80);
+    }
+  }
+  &.like-white{
+    background-color : @white;
+    &,&:focus{
+        color : @themeSecondaryBg;
+    }
+    .timer-bg{
+        background-color : fade(@themeSecondaryBg,80);
+    }
+  }
+}
+
+@lightgreen : lightgreen;
+// .ng-dirty.ng-invalid{
+//     background: @commonerrorbg;
+// }
+
+// .ng-dirty.ng-valid{
+//     background: @lightgreen;
+// }
+
+.radiobox,.checkbox{
+    .radiobox-square,
+    .checkbox-square{
+        width : 19px;
+        height : 19px;
+    }
+  &.white{
+    .radiobox-circle,
+    .checkbox-circle{
+        background-color : @white;
+        &:before{
+        background-color : @white;
+        }
+        &:after{
+        background-color : @themeBg;
+        color : @white;
+        }
+        &.active{
+            background-color : @themeBg;
+        }
+    }
+    .radiobox-square,
+    .checkbox-square{
+        background-color : @white;
+        &:before{
+        background-color : @themeBg;
+        }
+        &:after{
+        background-color : @themeBg;
+        color : @white;
+        }
+        &.active{
+            background-color : @themeBg;
+        }
+    }
+  }
+}
+
+@grey1 : #252525;
+//sb=selectbox
+.sb{
+    @sbORadius : 10px;
+    
+    &.rounded{
+        &,.sb-input .form-control,.sb-static-button,.sb-option{
+            .border-radius(50px);
+        }
+        .sb-option-list{
+            .border-radius(@sbORadius @sbORadius);
+        }
+    }
+    &.radius{
+        &,.sb-input .form-control,.sb-static-button,.sb-option{
+            .border-radius(5px);
+        }
+        .sb-option-list{
+            .border-radius(@sbORadius @sbORadius);
+        }
+    }
+    &, .sb-input, .sb-caret > span{
+        position : relative;
+    }
+    .sb-input{
+        .sb-caret{
+            position:absolute;
+            top : 50%; right:5px;
+            width : 50px; height : 32px;
+            margin-top : -16px;
+            padding : 0px 15px;
+            text-align: center;
+            overflow:  hidden;
+            > span{
+                display : inline-block;
+                vertical-align: middle;
+                width : 100%;
+                height:32px;
+                font-size : 1.5em;
+                &:first-child{
+                    margin-top:-31px;
+                }
+            }
+            .fa{
+                line-height : 0;
+                position : absolute;
+                top : 50%; margin-top : -2px;
+                left:50%; margin-left : -5px;
+            }
+        }
+        .form-control{
+            padding : 12px 15px;
+            &,&:hover,&:focus{
+                border:0 none;
+            }
+        }
+        .sb-button{
+            border:0 none;
+        }
+    }
+    .sb-selected-item{
+        &:not(.no-padding){
+            margin-bottom: 10px;
+        }
+    }
+    .sb-pill{
+        padding:5px 25px 5px 5px;
+        position: relative;
+        display: inline-block;
+        margin:3px;
+        &,.sb-pill-close{
+            .border-radius(4px);
+        }
+        .sb-pill-close{
+            padding : 3px;
+            position: absolute;
+            display: inline-block;
+            top : 50%;
+            margin-top : -8px;
+            right:5px;
+            font-size: 10px;
+            line-height: 0;
+        }
+    }
+    .sb-option-list{
+        position:absolute;
+        top : auto;
+        left:0; right:0;
+        z-index : 99;
+        height:0px;
+        overflow: hidden;
+        margin-top : 1px;
+        .box-shadow(0 3px 5px fade(@black,30));
+        ul{
+            list-style: none;
+            padding:10px; margin:0;
+            position: relative;
+            margin-top:-100%;
+        }
+        .sb-option{
+            padding : 5px 15px;
+            margin-bottom : 5px;
+        }
+    }
+    &.sb-o{
+        .sb-option-list{
+            height : auto;
+            > ul{
+                margin-top : 0;
+            }
+        }
+        .sb-input{
+            .sb-caret{
+                > span{
+                    &:first-child{
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+    .sb-static-button{
+        border:0 none;
+        display: inline-block;
+    }
+    &.sb-o{
+        &.sb-white{
+            .sb-option-list{
+                .box-shadow(0 5px 5px fade(@black,50));
+            }
+        }
+    }
+    &.sb-white{
+        &,.form-control{
+            background-color : @white;
+            color : @themeSecondaryBg;
+        }
+        .sb-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .sb-option-list{
+            background-color : @white;
+            color : @themeSecondaryBg;
+        }
+        .sb-option{
+            &:hover,&:focus{
+                // color : @white;
+                background-color : darken(@white,10);
+            }
+        }
+        .sb-static-button,.sb-pill{
+            background-color : @themeBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : @themeSecondaryBg;
+            }
+        }
+        .sb-pill{
+            .sb-pill-close{
+                background-color : fade(@themeSecondaryBg,30);
+                color : fade(@white,50);
+            }
+            &:hover,&:focus{
+                .sb-pill-close{
+                    color : fade(@white,90);
+                }   
+            }
+        }
+        &:hover,&:focus{
+            .sb-button.sb-caret{
+                background-color : @themeSecondaryBg;
+            }
+        }
+        &.outline{
+            &,.form-control{
+                background-color : transparent;
+            }
+            .form-control{
+                border:2px solid fade(@white,50);
+            }
+        }
+    }
+    //grey1
+    &.sb-grey1{
+        &,.form-control{
+            background-color : @grey1;
+            color : @white;
+        }
+        .sb-button{
+            background-color : @themeSecondaryBg;
+            color : @white;
+        }
+        .sb-option-list{
+            background-color : @grey1;
+            color : @white;
+        }
+        .sb-option{
+            &:hover,&:focus{
+                // color : @white;
+                background-color : darken(@grey1,10);
+            }
+        }
+        .sb-static-button,.sb-pill{
+            background-color : fade(@white,10);
+            color : @white;
+            &:hover,&:focus{
+                background-color : fade(@white,20);
+            }
+        }
+        .sb-pill{
+            .sb-pill-close{
+                background-color : fade(@themeSecondaryBg,30);
+                color : fade(@white,50);
+            }
+            &:hover,&:focus{
+                .sb-pill-close{
+                    color : fade(@white,90);
+                }   
+            }
+        }
+        &:hover,&:focus{
+            .sb-button.sb-caret{
+                background-color : @themeBg;
+            }
+        }
+        &.outline{
+            &,.form-control{
+                background-color : transparent;
+            }
+            .form-control{
+                border:2px solid fade(@white,50);
+            }
+        }
+    }
+    //secondary
+    &.sb-secondary{
+        &,.form-control{
+            background-color : @themeSecondaryBg;
+            color : @white;
+        }
+        .sb-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        // .sb-selected-item{
+        //     border-bottom:1px solid fade(@white,05);
+        // }
+        .sb-option-list{
+            background-color : @themeSecondaryBg;
+            color : @white;
+        }
+        .sb-option{
+            &:hover,&:focus{
+                color : @white;
+                background-color : @themeBg;
+            }
+        }
+        .sb-static-button,.sb-pill{
+            background-color : fade(@themeBg,30);
+            color : fade(@white,100);
+            &:hover,&:focus{
+                background-color : fade(@themeBg,80);
+                // color : fade(@themeSecondaryBg,90);
+            }
+        }
+        .sb-pill{
+            .sb-pill-close{
+                background-color : fade(@themeSecondaryBg,30);
+                color : fade(@white,50);
+            }
+            &:hover,&:focus{
+                .sb-pill-close{
+                    color : fade(@white,90);
+                }   
+            }
+        }
+        &:hover,&:focus{
+            .sb-button.sb-caret{
+                background-color : @themeBg;
+            }
+        }
+        &.outline{
+            &,.form-control{
+                background-color : transparent;
+            }
+            .form-control{
+                border:2px solid fade(@themeSecondaryBg,50);
+            }
+        }
+    }
+    //grey
+    &.sb-grey-theme{
+        &,.form-control{
+            background-color : @greySecondaryBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : darken(@greySecondaryBg,10);
+            }
+        }
+        .sb-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .sb-option-list{
+            background-color : @greySecondaryBg;
+            color : @white;
+        }
+        .sb-option{
+            &:hover,&:focus{
+                color : @white;
+                background-color : @themeBg;
+            }
+        }
+        .sb-static-button,.sb-pill{
+            background-color : fade(@themeBg,90);
+            color : fade(@white,100);
+            &:hover,&:focus{
+                background-color : fade(@themeBg,100);
+                // color : fade(@themeSecondaryBg,90);
+            }
+        }
+        .sb-pill{
+            .sb-pill-close{
+                background-color : fade(@greySecondaryBg,30);
+                color : fade(@white,50);
+            }
+            &:hover,&:focus{
+                .sb-pill-close{
+                    color : fade(@white,90);
+                }   
+            }
+        }
+        &:hover,&:focus{
+            .sb-button.sb-caret{
+                background-color : @themeBg;
+            }
+        }
+        &.outline{
+            &,.form-control{
+                background-color : transparent;
+            }
+            .form-control{
+                border:2px solid fade(@themeBg,50);
+            }
+        }
+    }
+}
+//sb-selectbox
+
+
+//input range
+@irButtonWidth : 60px;
+@irButtonHeight : 32px;
+.input-range,.input-number{
+    display: block;
+    &.rounded{
+        .form-control,.ir-button{
+            .border-radius(50px);
+        }
+    }
+    
+    .ir-input{
+        // margin-bottom : 5px;
+        .ir-button{
+            position:absolute;
+            width : @irButtonWidth; height : @irButtonHeight;
+            top : 50%;
+            margin-top : -16px;
+            padding : 0px 15px;
+            text-align: center;
+            overflow:  hidden;
+            white-space: nowrap;
+            border:0 none;
+            .ir-button-text{
+                font-size : 10px;
+            }
+            > span{
+                display : inline-block;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .fa{
+                font-size : 1.2em;
+            }
+        }
+        
+        .form-control{
+            padding : 12px 15px;
+            &,&:hover,&:focus{
+                border:0 none;
+            }
+        }
+    }
+    .ir-input{
+        @irbuttonrMargin : 4px;
+        &.ir-start{
+            padding-right :@irbuttonrMargin;
+            .form-control{
+                padding-left: @irButtonWidth+10px;
+            }
+            .ir-button.ir-left{
+                left:@irbuttonrMargin;
+            }
+        }
+        &.ir-end{
+            padding-left :@irbuttonrMargin;
+            .form-control{
+                padding-right: @irButtonWidth+10px;
+            }
+            .ir-button.ir-right{
+                right:@irbuttonrMargin;
+            }
+        }
+    }
+    .form-control{
+        border:0 none;
+    }
+    > .row{
+        &,>*{
+            padding : 0;
+        }
+    }
+    &.ir-white{
+        .form-control{
+            background-color : @white;
+            color : @themeSecondaryBg;
+            &:hover,&:focus{
+                background-color : fade(@white,90);
+            }
+        }
+        .ir-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .ir-input{
+            &:hover, &:focus{
+                .ir-button{
+                    background-color : @themeSecondaryBg;
+                }
+            }
+        }
+    }
+    //grey1 start
+    &.ir-grey1{
+        .form-control{
+            background-color : @grey1;
+            color : @white;
+            &:hover,&:focus{
+                background-color : lighten(@grey1,5);
+            }
+        }
+        .ir-button{
+            background-color : @themeSecondaryBg;
+            color : @white;
+        }
+        .ir-input{
+            &:hover, &:focus{
+                .ir-button{
+                    background-color : @themeBg;
+                }
+            }
+        }
+    }
+    //grey1 end
+
+    &.ir-secondary{
+        .form-control{
+            background-color : @themeSecondaryBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : darken(@themeSecondaryBg,10);
+            }
+        }
+        .ir-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .ir-input{
+            &:hover, &:focus{
+                .ir-button{
+                    background-color : fade(@themeBg,50);
+                }
+            }
+        }
+    }
+    &.ir-grey-theme{
+        .form-control{
+            background-color : @greySecondaryBg;
+            color : @white;
+            &:hover,&:focus{
+                background-color : darken(@greySecondaryBg,10);
+            }
+        }
+        .ir-button{
+            background-color : @themeBg;
+            color : @white;
+        }
+        .ir-input{
+            &:hover, &:focus{
+                .ir-button{
+                    background-color : fade(@themeBg,50);
+                }
+            }
+        }
+    }
+}
+//input range end
+//input number :start
+.input-number{
+    .ir-input{
+        .form-control{
+            text-align : center;
+        }
+        &.ir-start,&.ir-end{
+            padding-left : 0;
+            padding-right : 0;
+        }
+    }
+}
+//input number :end
+
+//input switch
+.input-switch{
+    display:table;
+    width :100%;    
+    .is-option{
+        display : table-cell;
+        padding : 5px;
+        vertical-align: middle;
+    }
+    .is-btn{
+        display : block;
+        text-align: center;
+        margin:0;
+        padding : 7px 10px;
+        width : 100%;
+    }
+    &.rounded{
+        &,.is-btn{
+            .border-radius(50px);
+        }
+    }
+    &.is-white{
+        background-color : @white;
+        &,.is-btn{
+            color : @themeSecondaryBg;
+        }
+        .is-btn{
+            background-color : transparent;
+            &:hover,
+            &:focus{
+                background-color : darken(@white,10);
+            }
+            &.is-active{
+                background-color : @themeBg;
+                color : @white;
+            }
+        }
+    }
+    &.is-grey1{ 
+        background-color : @grey1;
+        &,.is-btn{
+            color : @white;
+        }
+        .is-btn{
+            background-color : transparent;
+            &:hover,
+            &:focus{
+                background-color : lighten(@grey1,10);
+            }
+            &.is-active{
+                background-color : @themeBg;
+                color : @white;
+            }
+        }
+    }
+}
+//input switch end
+//dual input number :start
+.dual-input-number{
+    &.square{
+        .din-input,.din-fields{
+            .border-radius(5px);
+        }
+    }
+    button{
+        border:0 none;
+    }
+    > .row{
+        &{
+            padding : 0;
+        }
+    }
+    .din-input{
+        &,.din-fields{
+            padding : 5px;
+        }
+        & ,.din-label,button,.din-button,.form-control{
+            display : block;
+            text-align: center;
+            width : 100%;
+        }
+        .din-button,.din-label{
+            padding : 5px 5px;
+        }
+        .form-control{
+            .box-shadow(none);
+            border:0 none;
+            border-top : 1px solid;
+            border-bottom : 1px solid;
+            margin:1px 0;
+        }
+    }
+    &.din-white{
+        .din-input{
+            background-color : @white;
+            .form-control{
+                border-top-color : fade(@white,5);
+                border-bottom-color : fade(@white,5);
+            }
+            &:hover{
+                background-color : fade(@white,90);
+            }
+        }
+        .din-fields{
+            background-color : @themeSecondaryBg;
+        }
+        .din-label{
+            color : @themeSecondaryBg;
+        }
+        .din-button,.form-control{
+            background-color : transparent;
+        }
+        .din-button{
+            background-color : transparent;
+            color : fade(@white,50);
+            &:hover,&:focus{
+                background-color : fade(@white,5);
+                color : @white;
+            }
+        }
+    }
+    //grey1 start
+    &.din-grey1{
+        .din-input{
+            background-color : @grey1;
+            .form-control{
+                border-top-color : darken(@grey1,5);
+                border-bottom-color : darken(@grey1,5);
+            }
+            &:hover{
+                background-color : lighten(@grey1,3);
+            }
+        }
+        .din-fields{
+            background-color : darken(@grey1,5);
+        }
+        .din-label{
+            color : @white;
+        }
+        .din-button,.form-control{
+            background-color : transparent;
+        }
+        .din-button{
+            background-color : transparent;
+            color : fade(@white,50);
+            &:hover,&:focus{
+                background-color : fade(@white,5);
+                color : @white;
+            }
+        }
+    }
+    //grey 1 end
+}
+//dual input number :end
+
+//rangeslider start
+.rangeslider{
+    @rsHeight : 6px;
+    &.rounded{
+        .rs-inner,.rs-scale,.rs-bar,.rs-track,.rs-bar:after{
+            .border-radius(50px);
+        }
+    }
+    .rs-inner{
+        width : 100%;
+        height : @rsHeight;
+        position: relative;
+        display: table;
+        padding : 3px;
+    }
+    .rs-track{
+        width : inherit;
+        height : inherit;
+        position: relative;
+    }
+    .rs-scale{
+        left:0; right:0; top:0; bottom:0;
+    }
+    .rs-scale,.rs-bar{
+        line-height: 0;
+        position:absolute; 
+    }
+    @rsBarHeight : @rsHeight*3px;
+    .rs-bar{
+        height : @rsBarHeight;
+        width : 18px;
+        top : 50%;
+        margin-top:-(@rsBarHeight)/2;
+        &:after{
+            content : "";
+            position : absolute;
+            left:0; right:0; bottom:0; top:0;
+            margin:5px;
+            display : block;
+        }
+        &.rs-bar-start{
+            left: 0;
+            margin-left : -3px;
+        }
+        &.rs-bar-end{
+            right: 0;
+            margin-right : -3px;
+        }
+    }
+    &.rs-white{
+        .rs-inner{
+            background-color : @white;
+        }
+        .rs-track{
+            background-color : fade(@black,30);
+        }
+        .rs-scale{
+            background-color : @themeBg;
+        }
+        .rs-bar{
+            &:after{
+                background-color : @themeBg;
+            }
+            background-color : @white;
+            .box-shadow(0 0 0 2px fade(@themeSecondaryBg,10));
+        }
+        .rs-bar{
+            &:hover,&:focus{
+                background-color : @white;
+            }
+        }
+    }
+    //grey1 start
+    &.rs-grey1{
+        .rs-inner{
+            background-color : @grey1;
+        }
+        .rs-track{
+            background-color : fade(@black,30);
+        }
+        .rs-scale{
+            background-color : @themeBg;
+        }
+        .rs-bar{
+            &:after{
+                background-color : @themeBg;
+            }
+            background-color : @white;
+            .box-shadow(0 0 0 2px fade(@themeSecondaryBg,10));
+        }
+        .rs-bar{
+            &:hover,&:focus{
+                background-color : @white;
+            }
+        }
+    }
+    //grey1 end
+}
+//rangeslider end
+
+
+//control space
+.control-medium{
+    .control-set{
+        margin-bottom : 20px;
+    }
+}
+.required{
+    font-size : 1.5em;
+}
+.radius8x{
+    .border-radius(8px);
+}
+.radius10x{
+    .border-radius(10px);
+}
+.radius15x{
+    .border-radius(15px);
+}

@@ -1,0 +1,159 @@
+@coreroot : "../../../../../core/dm-less/";
+@assetroot : "../";
+@font-face {
+    font-family: 'Montserrat';
+    src: url('@{assetroot}fonts/montserrat-regular.ttf') format('truetype');
+} 
+@font-face { 
+    font-family: 'Montserrat Bold';
+    src: url('@{assetroot}fonts/montserrat-bold.ttf') format('truetype');
+}
+.font-regular{
+  font-family : 'Montserrat';
+}
+.font-bold{
+  font-family : 'Montserrat Bold'; 
+}
+@import "@{coreroot}variable.less"; 
+@import "variable.less";
+@import "@{coreroot}mixins.less";
+@import "@{coreroot}grid-v1.less";
+@import "@{coreroot}typography-v1.less";
+@import "@{coreroot}basic.less";
+@import "@{coreroot}form.less";
+@import "@{coreroot}radio-checkbox.less";
+@import "@{coreroot}alerts.less";
+@import "@{coreroot}modal.less";
+@import "@{coreroot}tooltip.less";
+@import "@{coreroot}table.less";
+@import "@{coreroot}tabs.less";
+@import "@{coreroot}panel.less";
+@import "@{coreroot}section-fit.less";
+@import "@{coreroot}responsive.less";
+@import "@{coreroot}theme.less";
+@import "@{coreroot}socials-buttons.less";
+@import "@{coreroot}scrollup-button.less";
+@import "@{coreroot}sizes.less";
+@import "@{coreroot}addon.less";
+@import "sub/animate.less";
+@import "sub/basic.less";
+@import "sub/bg.less";
+@import "sub/accessories.less";  
+@import "sub/list.less"; 
+@import "sub/form.less";
+@import "sub/modal.less";
+@import "sub/icheckbox.less";
+@import "sub/anchor.less";
+@import "sub/float-icon.less";
+@import "sub/flyout.less";
+@import "sub/loader.less";
+@import "sub/footer.less";
+@import "sub/zindex.less";   
+ 
+.lh-none{
+    line-height: 0;
+}
+.left-curve-bg{
+    background:url("@{assetroot}images/base/left-curve-black-bg.png") no-repeat right center;
+    position: absolute;
+    top:50%;
+    left:-19px;
+    margin-top : -55px;
+    color : @white;
+    width : 21px;
+    height:110px;
+    line-height : 110px;
+    .lcb-text{
+        display : inline-block;
+        padding-left : 15px;
+    }
+}
+
+//video wrapper 
+.video-sec {
+	position: relative;
+    width : 100%;
+    height : 100%;
+    display : block;
+}
+.video-sec iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//video wrapper :end
+
+//divider
+.divider{
+    border-bottom:1px solid fade(@black,10);
+    margin:2% 0;
+    &.divider-dashed{
+        border-style : dashed
+    }
+    &.divider-dotted{
+        border-style : dotted;
+    }
+    &.white{
+        border-bottom-color : @white;
+    }
+    &.theme{
+        border-bottom-color : @themeBg;
+    }
+    &.secondary{
+        border-bottom-color : @themeSecondaryBg;
+    }
+}
+.parallax{
+    position: relative;
+    .transition_(all 0.5s ease);
+}
+
+//cursor
+[type="radio"],[type="checkbox"],
+.button,button,a,[type="button"],
+.rangeslider .rs-track,.rangeslider .rs-bar,.rangeslider,.noselect{
+    cursor: pointer;
+}
+
+//transition
+.cmn.header,
+.home.header,
+.carousel-side,.carousel-item{
+    .transition_(all 1s ease-in-out);
+}
+.hoverbg,.sidebar-desktop{
+    .transition_(all 0.2s ease-out);
+}
+.scroll-show,.scroll-show > *:first-child,
+.sst-icon,.list-item{
+    .transition_(all 1s ease);
+}
+.rangeslider .rs-bar,.rangeslider .rs-scale,.parallax-bg{
+    .transition_(all 0.2s linear);
+}
+.content,.search-sidebar,.search-sidebar:after,.asidebar,
+.breadcrumb-list a,.sidebar-search-toggle .sst-anchor,
+.common-form-error,.form-error,
+.sf-arrows,.sf-arrow-icon,.sf-list > li > a,.sf-menu-sub,.sf-menu-sub ul{
+    .transition_(all 0.5s ease-out);
+}
+.transitions(~".din-grey1 , .din-input, .din-fields, .din-label, .din-button,.list-v1-link, .list-v1-img");
+.transitions(~".header-inner,.modal-close,.modal-container,.modal-close .fa");
+.transitions(~".radiobox,.checkbox");
+.transitions(~".form-control,.ir-button,.ir-input");
+.transitions(~".sb,.form-control,.sb-button,.sb-option-list,.sb-option-list > ul,.sb-caret >  span,.sb-option");
+.transitions(~".button,.input-a,.form-control,.form-label,.input-captcha-reload,.error-close");
+.transitions(~".icheckbox,.ic-label,.ic-circle,.ic-icon");
+//transition end 
+
+.brand{
+    display: table;
+    margin:0 auto;
+    &.brand-home{
+        width : 150px;
+    }
+}
+ 
+@import "fa/font-awesome.less";

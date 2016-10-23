@@ -1,0 +1,42 @@
+<svg id="verified_owner" data-name="verified owner" xmlns="http://www.w3.org/2000/svg" width="145" height="154" viewBox="0 0 145 154">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke: #011111;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #111;
+      }
+
+      .cls-3 {
+        fill: #011111;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 1px;
+      }
+
+      .cls-5 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M72.5,29C85.479,29,96,36.76,96,52.5S92.584,86,73.5,86C51.593,86,49,68.24,49,52.5S59.521,29,72.5,29Z"/>
+  <path id="Ellipse_2_copy" data-name="Ellipse 2 copy" class="cls-2" d="M77.5,60C82.077,66.67,99,72,99,72s-18.463-1-21.5-1A5.5,5.5,0,0,1,72,65.5C72,62.462,75.782,57.5,77.5,60Zm-10,0C61.384,67.183,46,71.857,46,71.857s18.462-.988,21.5-0.988A5.468,5.468,0,0,0,73,65.435C73,62.433,69.469,57.687,67.5,60Z"/>
+  <circle class="cls-3" cx="77.5" cy="53.5" r="1.5"/>
+  <circle id="Ellipse_3_copy" data-name="Ellipse 3 copy" class="cls-3" cx="67.5" cy="53.5" r="1.5"/>
+  <path id="Rounded_Rectangle_711" data-name="Rounded Rectangle 711" class="cls-4" d="M72.5,109H72a142.638,142.638,0,0,1-25.981-2.723C46.409,91.962,58.335,88,73,88c14.6,0,26.491,3.928,26.977,18.1A146.765,146.765,0,0,1,72.5,109Z"/>
+  <path class="cls-5" d="M48.734,51.45s1.35-14.29,15.823-12.635,17.325-7.647,13.076-11.959-13.7-1.283-12.538,5.272,8.4,1.573,8.4,1.573"/>
+  <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-2" d="M110,104l-8-3v6Zm21-3-27-3,11,7v11s5.887,0.055,15,1l-7-9Zm-99,5s6,6,40,6,41-6,41-6v20s-2,6-40,6-41-6-41-6V106Zm3-2,8-3v6Zm-21-3,27-3-11,7v11s-5.887.055-15,1l7-9Z"/>
+</svg>

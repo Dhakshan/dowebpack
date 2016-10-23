@@ -1,0 +1,13 @@
+<!--//modal reference
+    src.something...
+-->
+<div *ngIf="src.modalData.html" [innerHtml]="src.modalData.msg"></div>
+<div class="pad30px" *ngIf="!src.modalData.html">{{src.modalData.msg}}</div>
+<div class="bg white opacity25 pad-b1px" *ngIf="src.modalData.action"></div>
+<div class="row row-nopad no-padding" *ngIf="src.modalData.action">
+    <div class="{{btn.gridclass}}" *ngFor="let btn of src.modalData.action">
+        <div class="">
+            <button type="button" class="button stretch {{btn.class}} margin0px" (click)="src.modalData.click($event,btn.key,src)">{{btn.label}}</button>
+        </div>
+    </div>
+</div>

@@ -1,41 +1,489 @@
-<div class="card-container">
-  <h1 x-large class="sample-content">Your Content Here</h1>
+<app-toaster [cs]="cs" *ngIf="cs"></app-toaster>
+<section class="section-fit " *ngIf="cs.app">
+	<!--//Home background section-->
+	<div class="sticky-bg">
+		<div class="background  home-slide1 pos-abs trbl">
+		</div>
+	</div>
+	<!--//header section-->
+	<header class="home header" (window:scroll)="cs.headerScroll($event,this)">
+		<div class="header-inner" [ngClass]="cs.headerClass">
+			<nav class="navbar-main">
+				<div class="row no-padding">
+					<div class="grid10-xs grid4-xsm">
+						<div class="row no-padding">
+							<div class="grid6-xs">
+								<p class="top-left-btn location-tag stretch">
+									<a href="javascript:void(0)" class="float-icon-text" title="Chennai"><span class="fi-icon"><span class="fa fa-map-marker"></span></span><span class="fi-label">Chennai</span></a>
+								</p>
+							</div>
+							<div class="grid6-xs" *ngIf="cs.searchToggle">
+								<p class="top-left-btn stretch">
+									<a href="javascript:void(0);" class="float-icon-text" title="Quick Search" (click)="cs.flyoutToggleBtnClick($event,cs.isSearchHidden)"><span class="fi-icon"><span class="fa fa-search"></span></span><span class="fi-label">Search</span></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid2-xs grid8-xsm">
+						<ul class="navlist list-nostyle visible-from-xsm">
+							<li><a class="white" title="Post Your Property">Post Your Property</a></li>
+							<li class="link-combine"><a href="home#whyshouldi" (click)="cs.hashclick('whyshouldi')">Why Should I,</a><a href="#" title="Sign Up" (click)="cs.modalOpen({event:$event,name:'signupModal',show : true})">Signup?</a></li>
+							<li><a href="#" title="Login" (click)="cs.modalOpen({event:$event,name:'loginModal',show:true,other:false})">Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="relative">
+		<!--//Flyout for float search...-->
+		<div class="flyout" [ngClass]="cs.showFlyout(cs.isSearchHidden)">
+			<div class="inner">
+				<a class="flyout-close" href="javascript:void(0)" title="Search Close" (click)="cs.flyoutToggleBtnClick($event,cs.isSearchHidden)"><span class="fa fa-remove"></span></a>
+				<div class="desktop pad-y30px" *ngIf="cs.app && cs.app.formField">
+					<h4 class="lead h4 margin-b30px pad-l10px"><span class="fa fa-search margin-r10px"></span> Quick Search</h4>
+					<form (submit)="cs.homeform.submit($event,cs.homeform)" (ngFormModel)="cs.homeform.form" method="post">
+						<div class="row">
+							<div class="grid6-smd">
+								<div class="constrol-set margin-b15px">
+									<label class="form-label">Choose a property type</label>
+									<app-radiobutton [src]="{ control: 'propFor',form:cs.homeform.form, data : { option : cs.app.formField.choosetype.fields }, theme : 'grey-theme' }"></app-radiobutton>
+								</div>
+								<div class="constrol-set margin-b15px">
+									<label class="form-label">Choose a property for</label>
+									<app-radiobutton [src]="{ control: 'propType',form:cs.homeform.form, data : { option : cs.app.formField.choosefor.fields }, theme : 'grey-theme' }"></app-radiobutton>
+								</div>
+							</div>
+							<div class="grid6-smd">
+								<div class="control-set">
+									<label class="form-label">Enter your prepared 4 location</label>
+									<app-multiselect [src]="{ placeholder: 'Enter 4 location',control : 'propLocation',form:cs.homeform.form, id: 'propLocation', theme: 'grey-theme', suggestion : true, data: { option: cs.app.suggestLocation, limit: 2 }, common:cs }"></app-multiselect>
+								</div>
+								<div class="control-set">
+									<label class="form-label">Enter your budget</label>
+									<app-inputrange [src]="{ placeholder:{min:'Budget',max:'Budget'},control : 'budget',form:cs.homeform.form,id:{min:'budgetMin',max:'budgetMax'},data:{ range : 5000, value : {min:'',max:''}},theme:'grey-theme rounded',setInitValue:false}"></app-inputrange>
+								</div>
+							</div>
+						</div>
+						<p class="dashed opacity25"></p>
+						<p class="pad-t20px text-center">
+							<button type="submit" class="button outlined theme theme-alt rounded large"><span class="pad-x50px">Search</span></button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="home section-fit relative" parallax *ngIf="cs.app">
+		<div class="section-fit-inner">
+			<div class="s1">
+				<h1 class="brand brand-home">
+					<a title="{{cs.app.name}}"><img src="assets/images/base/brand.png" alt="{{cs.app.name}}" /></a>
+				</h1>
+				<div class="pad-y10px">&nbsp;</div>
+				<div parallax class="liketable center home-intro-search-form" *ngIf="cs.app && cs.app.formField">
+					<form (submit)="cs.homeform.submit($event,cs.homeform)" (ngFormModel)="cs.homeform.form" method="post">
+						<div class="control-set margin-b15px text-center">
+							<app-radiobutton [src]="{ control: 'propFor',form:cs.homeform.form, data : { option : cs.app.formField.choosetype.fields }, theme : 'secondary-theme' }"></app-radiobutton>
+						</div>
+						<div class="control-set margin-b15px text-center">
+							<app-radiobutton [src]="{ control: 'propType',form:cs.homeform.form, data : { option : cs.app.formField.choosefor.fields }, theme : 'secondary-theme' }"></app-radiobutton>
+						</div>
+						<div class="control-set control-strike-decor">
+							<div class="row row-as-table-sm stretch">
+								<div class="grid5-sm">
+									<app-multiselect [src]="{ placeholder: 'Enter 4 location',control : 'propLocation',form:cs.homeform.form, id: 'propLocation', theme: 'secondary', suggestion : true, data: { option: cs.app.suggestLocation, limit: 2 }, common:cs }"></app-multiselect>
+								</div>
+								<div class="grid7-sm">
+									<div class="control-home-search-submit-group">
+										<app-inputrange [src]="{ placeholder:{min:'Budget',max:'Budget'},control : 'budget',form:cs.homeform.form,id:{min:'budgetMin',max:'budgetMax'},data:{ range : 5000, value : {min:'',max:''}},theme:'secondary rounded',setInitValue:false}"></app-inputrange>
+										<button type="submit" class="button theme theme-white rounded home-search-submit"><span class="pad-x10px"><span class="fa fa-search"></span></span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="visible-from-sm pad-y50px">&nbsp;</div>
+				<div class="visible-from-sm pad-y40px">&nbsp;</div>
+			</div>
+			<a href="home#howitsworks" (click)="cs.hashclick('howitsworks')" class="scrolldown">
+				<span class="scrolldown-btn">
+                <span class="scrolldown-btn-wheel">&nbsp;</span>
+				</span>
+				<span class="scrolldown-label uppercase">Scroll Down</span>
+			</a>
+		</div>
+	</section>
+</section>
+<!--//Last 24 hrs property update-->
+<section class="bg secondary " parallax *ngIf="cs.app" data-hcolor="home-header-theme">
+	<div class="bg theme pad-t5px"></div>
+	<div class="section-article">
+		<div class="desktop">
+			<div class="row text-center">
+				<div class="grid6-sm push3-sm push3-smd push3-md push3-lg">
+					<h2 class="lead h3 text theme">Last 24 Hours</h2>
+					<p class="dashed white opacity10"></p>
+				</div>
+			</div>
+			<div class="row row-as-table-xs center margin-t50px">
+				<div class="grid4-sm">
+					<div class="counter text-center">
+						<div class="counter-count opacity50">
+							<h3 class="count-cell" *ngFor="let cell of cs.app.last24Hrs.inArray">
+								<span class="counter-count-digit active{{cell}} font-bold">
+                                   <span>0</span>
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+								<span>5</span>
+								<span>6</span>
+								<span>7</span>
+								<span>8</span>
+								<span>9</span>
+								</span>
+							</h3>
+						</div>
+						<div class="counter-count-icon opacity50">
+							<img src="assets/images/icon/download.png" alt="Download" />
+						</div>
+						<p class="text theme lead h6 nowrap pad-y10px">Rent & Sale</p>
+					</div>
+				</div>
+				<div class="grid4-sm">
+					<h4 class="lead h4 opacity50 pad-x20px text-center">In & Out</h4>
+				</div>
+				<div class="grid4-sm">
+					<div class="counter text-center">
+						<div class="counter-count opacity50">
+							<h3 class="count-cell" *ngFor="let cell of cs.app.last24Hrs.outArray">
+								<span class="counter-count-digit active{{cell}} font-bold">
+                                   <span>0</span>
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+								<span>5</span>
+								<span>6</span>
+								<span>7</span>
+								<span>8</span>
+								<span>9</span>
+								</span>
+							</h3>
+						</div>
+						<div class="counter-count-icon opacity50">
+							<img src="assets/images/icon/upload.png" alt="Upload" />
+						</div>
+						<p class="text theme lead h6 nowrap pad-y10px">Rented Out &amp; Sold Out</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--//Last 24 hrs property update-->
 
-  <div>
-    For material design components use the <a href="https://github.com/AngularClass/angular2-webpack-starter/tree/material2"><b>material2</b></a> branch
-  </div>
+<!--//How its works...-->
+<section class="bg theme theme-alt " parallax  id="howitsworks" data-hcolor="home-header-secondary">
+	<div class="section-article">
+		<div class="desktop">
+			<div class="row">
+				<div class="grid6-sm">
+					<h2 class="lead h4 uppercase">How it works</h2>
+				</div>
+				<div class="grid6-sm text-right">
+					<a href="#" title="Watch how it works" class="button outlined secondary-white-theme radius" (click)="cs.modalOpen({event:$event,name:'howItWorkVideoModal',show:true,other:false})">
+						<span class="button-label">Watch</span>
+						<span class="button-icon radius"><span class="fa fa-play"></span></span>
+					</a>
+				</div>
+			</div>
+			<div class="pad-y20px"></div>
+			<div class="row">
+				<div class="grid4-sm">
+					<h5 class="lead h6 float-icon-text float-icon-circle secondary uppercase"><span class="fi-icon circle">1</span><span class="fi-label">Search<br/>Your Location</span></h5>
+				</div>
+				<div class="grid4-sm">
+					<h5 class="lead h6 float-icon-text float-icon-circle secondary uppercase"><span class="fi-icon circle">2</span><span class="fi-label">Sign Up /<br/>Express Interest</span></h5>
+				</div>
+				<div class="grid4-sm">
+					<h5 class="lead h6 float-icon-text float-icon-circle secondary uppercase"><span class="fi-icon circle">3</span><span class="fi-label">Meet<br/> Owners</span></h5>
+				</div>
+			</div>
+			<div class="pad-y20px"></div>
+			<div class="row row-as-table-sm center">
+				<div class="grid4-sm">
+					<div class="row">
+						<div class="grid5-xsm">
+							<p class="figure white-alt">
+								<img class="blank-img" src="assets/images/base/transparent.png" />
+								<span class="figure-img pos-abs trbl circle">
+                                    <span class="section-fit">
+                                        <span class="section-fit-inner">
+                                            <img class="figure-home-1" src="assets/images/icon/buyer.png" alt="Property Buyer"/>
+                                        </span>
+								</span>
+								</span>
+							</p>
+						</div>
+						<div class="grid2-xsm">
+							<p class="figure-exchange-icon"><img class="autowidth" src="assets/images/icon/exchange.png" alt="Buyer and Owner" /></p>
+						</div>
+						<div class="grid5-xsm">
+							<p class="figure white-alt">
+								<img class="blank-img" src="assets/images/base/transparent.png" />
+								<span class="figure-img pos-abs trbl circle">
+                                    <span class="section-fit">
+                                        <span class="section-fit-inner">
+                                            <img class="figure-home-2" src="assets/images/icon/owner.png" alt="Property Buyer"/>
+                                        </span>
+								</span>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="grid8-sm">
+					<p class="text-justify line-space2h lead h6">
+						The wait is over, now you can experience a serene and calm environment in the overcrowded marketplace. With us, you can search
+						for properties across regions with perfect detailing of the locality and other amenities available. We explore tand
+						present you with the most recent, genuine, updated and appropriate seller/buyer products.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--//How its works...-->
 
-  <hr>
+<!--//Features..-->
+<section class="bg white " parallax data-hcolor="home-header-theme">
+	<div class="section-article">
+		<div class="desktop">
+			<h2 class="lead h4 uppercase text theme">Features</h2>
+			<div class="row row-nopad">
+				<div class="grid4-sm">
+					<div class="bg secondary uppercase pad20px">
+						<h6 class="lead h5">Unlimited</h6>
+						<p class="font1em text theme">Property database as verified & latest</p>
+					</div>
+					<br/>
+					<div class="bg secondary uppercase pad20px">
+						<h6 class="lead h5">Earn Points</h6>
+						<p class="font1em text theme">For every referral, take sodexo coupons</p>
+					</div>
+					<br/>
+					<div class="bg secondary uppercase pad20px">
+						<h6 class="lead h5">Are you a tenant?</h6>
+						<p class="font1em text theme">Refer a owner & get subscription free!<span>*</span></p>
+					</div>
+				</div>
+				<div class="grid8-sm text-justify">
+					<div class="pad-x30px line-space2h lead h6 ">
+						<p>
+							Our Mission is to provide a hassle free selling, buying and renting experience through a technically advanced owner only
+							portal; with verified, updated and genuine information to save their Time, Effort and Cost.
+						</p>
+						<p>
+							The wait is over, now you can experience a serene and calm environment in the overcrowded marketplace. With us, you can search
+							for properties across regions with perfect detailing of the locality and other amenities available. We explore and
+							present you with the most recent, genuine, updated and appropriate seller/buyer products.
+						</p>
+						<p class="pad-y20px">
+							<a class="button theme theme-alt rounded medium"><span class="pad-x20px">Know More</span></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--//Features..-->
 
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
-  </div>
+<!--//Post your property...-->
+<section class="bg theme " parallax data-hcolor="home-header-secondary">
+	<div class="section-article">
+		<div class="desktop">
+			<div class="row row-as-table-xsm stretch">
+				<div class="grid8-sm">
+					<h2 class="lead h4">Post your Property & Get Sodexo Voucher </h2>
+					<p class="lead h6">
+						Don’t forget to claim 500 gift voucher after Rented/Sold out your Property through us
+					</p>
+				</div>
+				<div class="grid4-sm text-right-sm">
+					<div class="pad-x30px line-space2h font1-2em">
+						<p>
+							<a class="button secondary secondary-white rounded medium"><span class="pad-x20px">Post Now</span></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg secondary pad-y5px"></div>
+</section>
+<!--//Post your property...-->
 
-  <hr>
+<!--Refer owner / friend...-->
+<section class="background background-fixed bg-home-refer-and-win " parallax data-hcolor="home-header-white">
+	<div class="row row-nopad no-padding">
+		<div class="grid6-sm push6-sm push6-smd push6-md push6-lg bg theme">
+			<div class="pad50px">
+				<h3 class="lead h3">Refer & Win A Gift Coupon<br/>Or Free Subscribptions</h3>
+				<p class="line-space2h font1-2em text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+					irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				<p class="row no-padding row-as-table-xsm margin-y20px">
+					<span class="grid6-xsm">
+                            <button type="button" class="button fill-stroke white white-alt rounded  font1-2em" (click)="cs.modalOpen({event:$event,name:'referAFriendModal',show:true,other:false})"><span class="pad-x10px">Refer a Friend</span></button>
+					</span>
+					<span class="grid6-xsm">
+                            <button type="button" class="button fill-stroke white white-alt rounded  font1-2em" (click)="cs.modalOpen({event:$event,name:'referAOwnerModal',show:true,other:false})"><span class="pad-x10px">Refer a Owner</span></button>
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Refer owner / friend...-->
 
-  <div>
-    <h4>Local State</h4>
+<!--//Why should i, Sign up?-->
+<section class="bg secondary  " parallax id="whyshouldi" data-hcolor="home-header-theme">
+	<div class="bg white pos-abs-sm grid6-sm trbl zindex-bottom"></div>
+	<div class="desktop relative zindex-top">
+		<div class="row no-padding row-nopad">
+			<div class="grid6-sm text secondary">
+				<div class="pad-y50px pad-x30px">
+					<h4 class="lead h4"><span class="opacity75">Why Should I,</span> Sign Up?</h4>
+					<p class="pad10px"></p>
+					<div class="font1-2em">
+						<p>
+							Are you a registered user, thinking whether to subscribe,</p>
+						<p>
+							Here are a few hints for you…
+						</p>
+						<ul class="list-nostyle margin-t40px">
+							<li>
+								<p class="float-icon-text margin-b20px"><span class="fi-icon opacity50"><span class="fa fa-check"></span></span><span class="fi-label pad-l20px">You’re genuinity easily connects you to direct owners</span></p>
+							</li>
+							<li>
+								<p class="float-icon-text margin-b20px"><span class="fi-icon opacity50"><span class="fa fa-check"></span></span><span class="fi-label pad-l20px">You’re eligible for reward programs. earn points 
+    for every referral, take Sodexo coupons</span></p>
+							</li>
+							<li>
+								<p class="float-icon-text margin-b20px"><span class="fi-icon opacity50"><span class="fa fa-check"></span></span><span class="fi-label pad-l20px">On subscription, you’re eligible for engaging a 
+    Relationship Manager * and Site-Visit Assistance **</span></p>
+							</li>
+						</ul>
+					</div>
+					<p class="pad10px"></p>
+					<p class="margin-t30px">
+						<button type="button" class="button fill-stroke white white-alt border2x rounded font1-2em"  (click)="cs.modalOpen({event:$event,name:'signupModal',show:true,other:false})"><span class="pad-x10px">Sign Up Now</span></button>
+					</p>
+				</div>
+			</div>
+			<div class="grid6-sm">
+				<div class="pad-y50px text theme liketable center">
+					<ul class="list-nostyle margin-t40px font1-2em ">
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-clock-o"></span></span><span class="fi-label pad-l20px">Save Time, Effort & Cost</span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-graduation-cap"></span></span><span class="fi-label pad-l20px">Expert Assistance</span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-check"></span></span><span class="fi-label pad-l20px">Verified, Latest and Updated </span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-certificate"></span></span><span class="fi-label pad-l20px">Subscription & Reward Programs </span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-headphones"></span></span><span class="fi-label pad-l20px">Friendly customer care</span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-shield"></span></span><span class="fi-label pad-l20px">100% Money Back Guarantee</span></p>
+						</li>
+						<li>
+							<p class="float-icon-text margin-b20px"><span class="fi-icon"><span class="fa fa-gift"></span></span><span class="fi-label pad-l20px">Free Package</span></p>
+						</li>
+					</ul>
+					<p class="pad10px"></p>
+					<p class="margin-t15px">
+						<a title="Why should I, Pay" class="button fill-stroke secondary secondary-alt border2x rounded  font1-2em"><span class="pad-x10px">Read More</span></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--//Why should i, Sign up?-->
 
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button md-raised-button color="primary">Submit Value</button>
-    </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
-
-    <pre>this.localState = {{ localState | json }}</pre>
-
-  </div>
-
+<!--// Testimonials-->
+<section class="bg black1 " parallax data-hcolor="home-header-white" *ngIf="cs.testimonials">
+	<div class="section-article">
+		<div class="desktop">
+			<h3 class="lead h3 margin-b50px text-center">Our Client Says! About <span class="text theme">DirectOwners.com</span></h3>
+			<div class="carousel-slide-v1" [ngClass]="cs.slides(cs.testimonials,{delay : 3000})">
+				<div class="carousel-inner">
+					<div class="carousel-item" *ngFor="let testimonial of cs.testimonials.list" [ngClass]="(testimonial.selected)?'active':''">
+						<div class="blockquote">
+							<span class="quote quote-start">“</span>
+							<a class="blockquote-content font1-2em line-space2h opacity75 link white pad-x10px" title="{{testimonial.url}}">
+                                    {{testimonial.shortdesc}}.. <span class="fa fa-expand margin-x10px"></span>
+                                </a>
+							<p class="blockquote-content font1-2em line-space2h">
+								<span class="block relative">
+                                    <span class="dashed pos-abs topleft pad-x20px margin-t20px opacity50"></span>
+								<span class="blockquote-author-name margin-l60px">{{testimonial.author}}, {{testimonial.location}}</span>
+								</span>
+							</p>
+							<span class="quote quote-end">”</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<app-footercommon parallax [cs]="cs"></app-footercommon>
+<app-footer parallax [cs]="cs"></app-footer>
+<!--// Common modal --> 
+<div class="relative" *ngIf="cs.app && cs.modal">
+    <div *ngFor="let item of cs.modallist">
+        <div class="modal {{item.theme}} {{item.name}} in" *ngIf="item.show" [ngClass]="(item.show)?'open':''">
+			<div class="backdrop opacity90"></div>
+				<div class="section-fit">
+					<div class="section-fit-inner">
+					<div class="modal-container {{item.sizes}}">
+						<div class="progress-loader-a pad-t10px" *ngIf="item.loader">&nbsp;</div>
+						<div class="modal-header" *ngIf="item.header">
+							<div class="modal-title">
+								<h3 class="pad-y15px lead h4">{{item.title}}</h3>
+								<button type="button" class="modal-close" (click)="cs.modalClose({event:$event,name:item.name,status:true})">
+									<span class="modal-close-icon">&times;</span>
+								</button>
+							</div>
+						</div>
+						<div class="modal-body no-padding">
+							<modal-signup *ngIf="item.name=='signupModal'" [src]="item" ></modal-signup>
+							<modal-login *ngIf="item.name=='loginModal'" [src]="item" ></modal-login>
+							<modal-forgot-password *ngIf="item.name=='forgotPasswordModal'" [src]="item" ></modal-forgot-password>
+							<modal-mobile-verification *ngIf="item.name=='mobileVerificationModal'" [src]="item" ></modal-mobile-verification>
+							<modal-reset-password *ngIf="item.name=='resetPasswordModal'" [src]="item" ></modal-reset-password>
+							<modal-suggest-location *ngIf="item.name=='suggestLocationModal'" [src]="item" ></modal-suggest-location>
+							<modal-refer-owner *ngIf="item.name=='referAOwnerModal'" [src]="item" ></modal-refer-owner>
+							<modal-refer-friend *ngIf="item.name=='referAFriendModal'" [src]="item" ></modal-refer-friend>
+							<modal-notification *ngIf="item.name=='notificationModal'" [src]="item" ></modal-notification>
+							<modal-view-agreement *ngIf="item.name=='viewAgreementModal'" [src]="item" ></modal-view-agreement>
+							<modal-how-it-work-video *ngIf="item.name=='howItWorkVideoModal'" [src]="item" ></modal-how-it-work-video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>

@@ -1,0 +1,38 @@
+.float-icon-text{
+    position: relative;
+    .fi-icon{
+        position:absolute;
+        top : 50%;
+        left:5px;
+        margin-top:-9px;
+        display : inline-block;
+        text-align: center;
+    }
+    .fi-label{
+        display : inline-block;
+        vertical-align: middle;
+        margin-left:25px;
+    }
+    &.float-icon-circle{
+        .fi-icon{
+            padding : 10px 10px;
+            width : 39px;
+            margin-top : -20px;
+        }
+        .fi-label{
+            margin-left : 55px;
+        }
+        &.secondary{
+            .fi-icon{
+                background-color : @themeSecondaryBg;
+                color : @white;
+            }
+        }
+    }
+}
+
+.form-error{
+    .fi-label{
+        margin-left : 35px;
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "title" : "Lorem ipsum dolor sit amet",
+            "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis arcu ipsum, sed porttitor est pellentesque ac. Phasellus vulputate mattis sollicitudin. Phasellus rhoncus dapibus lacus quis porta. Duis nec libero eu massa porta bibendum. In finibus posuere velit vel condimentum. Duis sed efficitur purus. Praesent purus nisl, rutrum vitae scelerisque a, tristique vel nisl. Proin euismod ornare erat at volutpat. Curabitur pretium nisi vel ultrices commodo. ",
+            "published": "16 May 2016",
+            "url": "/common/news/DO-news-1",
+            "ref": "DO-news-1"
+        },
+        {
+            "id": 1,
+            "title" : "Etiam ac velit sagittis",
+            "shortdesc": "Etiam ac velit sagittis, vestibulum libero nec, faucibus metus. Praesent dapibus dignissim ex a rutrum. Sed augue orci, efficitur placerat neque eu, iaculis tincidunt erat. Donec pellentesque ex ac enim dignissim sagittis. Curabitur convallis ligula in eleifend ultrices. Nulla laoreet tempus leo in luctus. Donec venenatis sollicitudin massa et aliquet. Vestibulum a vulputate nisi, nec luctus risus. Sed tristique id quam id commodo. Fusce vel magna diam. Quisque luctus mauris in bibendum fermentum. Vestibulum ac vulputate purus, a condimentum diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac justo nibh. Aliquam sit amet massa mauris. ",
+            "published": "30 March 2016",
+            "url": "/common/news/DO-news-2",
+            "ref": "DO-news-2"
+        },
+        {
+            "id": 2,
+            "title" : "Nullam faucibus, odio at egestas cursus, nisl mauris euismod",
+            "shortdesc": "Nullam faucibus, odio at egestas cursus, nisl mauris euismod purus, ut sagittis odio tellus sed dui. Aenean tempor est id sem finibus accumsan. Proin ut augue eu sem iaculis convallis. Vivamus eget volutpat quam. Mauris libero purus, rutrum eu eros ut, tempus blandit metus. Duis vel pretium massa. Donec vel sodales leo. ",
+            "published": "21 Feb 2016",
+            "url": "/common/news/DO-news-3",
+            "ref": "DO-news-3"
+        },
+        {
+            "id": 3,
+            "title" : "Suspendisse tincidunt risus quis tellus",
+            "shortdesc": "Suspendisse tincidunt risus quis tellus condimentum imperdiet eu nec nulla. Sed aliquet commodo auctor. Fusce euismod odio id magna posuere porta. Fusce consequat eros id semper vulputate. Phasellus viverra tempor nibh quis commodo. Quisque dictum arcu sed tellus ullamcorper, nec tristique sapien vehicula. Nulla ornare lectus in urna aliquet tempor. Nullam et sagittis odio, id euismod sem. Mauris sit amet tempor sem, nec aliquam justo. Fusce ultricies lacus quis tempus lobortis. Pellentesque enim neque, convallis vel iaculis eu, tempor eget metus. Sed at nunc a ipsum semper ullamcorper ac non urna. Cras tincidunt condimentum purus id auctor. Suspendisse ipsum ante, viverra ac elit ac, dapibus laoreet est. Nulla vitae interdum justo. ",
+            "published": "02 Feb 2016",
+            "url": "/common/news/DO-news-4",
+            "ref": "DO-news-4"
+        },
+        {
+            "id": 4,
+            "title" : "Suspendisse tincidunt risus quis tellus",
+            "shortdesc": "Integer ornare velit nulla, et hendrerit purus molestie vitae. Aliquam accumsan dictum tellus, id placerat odio scelerisque varius. Pellentesque feugiat libero sed dolor eleifend sodales. Sed a felis vitae orci malesuada scelerisque. Proin nec consequat eros. Sed sed tristique elit, in aliquet turpis. Sed lacinia eleifend sapien, id tempus lectus tristique eu. Morbi condimentum pharetra magna, sit amet pellentesque massa porttitor sed. Curabitur at erat id neque facilisis imperdiet. Sed mi metus, suscipit at elementum nec, pulvinar sed magna. Aenean maximus mollis viverra. Aliquam faucibus ante sed tincidunt cursus. Aenean blandit non felis eu porta. Nam mauris risus, gravida at tempor ut, feugiat eget nulla. Duis eget purus molestie urna egestas egestas. ",
+            "published": "15 Jan 2016",
+            "url": "/common/news/DO-news-5",
+            "ref": "DO-news-5"
+        }
+    ]
+}

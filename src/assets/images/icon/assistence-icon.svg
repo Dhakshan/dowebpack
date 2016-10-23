@@ -1,0 +1,29 @@
+<svg id="assistence_icon" data-name="assistence icon" xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_721" data-name="Rounded Rectangle 721" class="cls-1" d="M51,45.25s-6.3.246-9.159-4.275A10.074,10.074,0,0,1,34.63,44H33.37a10.074,10.074,0,0,1-7.211-3.025C23.3,45.5,17,45.25,17,45.25c2.647-.574,3.848-2.209,3.778-5-0.052-2.083.675-10.111,1.047-14.047-1.714-3.465,1.825-9.857,5.249-8.453,0,0,.578-3.75,7.556-3.75,6.053,0,13.192,6.731,11.493,11.651,0.351,3.681,1.154,12.413,1.1,14.6C47.152,43.04,48.353,44.675,51,45.25ZM23.3,27.75h0ZM41.56,24c-6.013,3.773-9.717-2.5-9.717-2.5s-2.148,2.352,1.215,5c-3.934-.076-4.762-3.748-3.644-6.25-5.387.113-4.858,7.5-4.858,7.5V36.5a8.594,8.594,0,0,0,8.5,6.5c7.61,0,8.5-6.5,8.5-6.5V24ZM44.7,27.75h0Z"/>
+  <path id="Shape_3_copy" data-name="Shape 3 copy" class="cls-1" d="M22.037,47.75l6.05-2.5L34.136,54V64l-7.26-7.5,1.21-5L22,50Zm22.989,0-6.05-2.5L32.926,54V64l7.26-7.5-1.21-5L45,50Z"/>
+  <path id="Rounded_Rectangle_721_copy_2" data-name="Rounded Rectangle 721 copy 2" class="cls-2" d="M18.25,27.75h3.813a2.5,2.5,0,0,1,2.5,2.5v2.5a2.5,2.5,0,0,1-2.5,2.5H18.25a0,0,0,0,1,0,0v-7.5A0,0,0,0,1,18.25,27.75Z"/>
+  <path id="Rounded_Rectangle_721_copy_3" data-name="Rounded Rectangle 721 copy 3" class="cls-3" d="M45.938,27.75H49.75a0,0,0,0,1,0,0v7.5a0,0,0,0,1,0,0H45.938a2.5,2.5,0,0,1-2.5-2.5v-2.5A2.5,2.5,0,0,1,45.938,27.75Z"/>
+  <path id="Rounded_Rectangle_721_copy" data-name="Rounded Rectangle 721 copy" class="cls-4" d="M18.259,30.25V21.5c0-5.706,5.814-14.5,15.407-14.5s16.074,8.977,16.074,14.5v8.75"/>
+  <path id="Shape_3_copy_2" data-name="Shape 3 copy 2" class="cls-4" d="M41.984,40H37"/>
+  <rect id="Rounded_Rectangle_722" data-name="Rounded Rectangle 722" class="cls-5" x="34" y="38" width="4" height="3" rx="1.5" ry="1.5"/>
+</svg>

@@ -62,8 +62,8 @@
     "@angular/common": "2.1.0",
     "@angular/compiler": "2.1.0",
     "@angular/core": "2.1.0",
-    "@angular/forms": "^2.1.0",
-    "@angular/http": "2.1.0",
+    "@angular/forms": "^2.1.1",
+    "@angular/http": "2.1.1",
     "@angular/platform-browser": "2.1.0",
     "@angular/platform-browser-dynamic": "2.1.0",
     "@angular/platform-server": "2.1.0",
@@ -75,7 +75,7 @@
     "core-js": "^2.4.1",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
-    "rxjs": "^5.0.0-rc.1",
+    "rxjs": "^5.0.0-beta.12",
     "zone.js": "~0.6.17"
   },
   "devDependencies": {
@@ -108,6 +108,8 @@
     "karma-remap-coverage": "^0.1.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.8.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "parse5": "^2.2.2",
     "protractor": "^4.0.9",
     "raw-loader": "0.5.1",

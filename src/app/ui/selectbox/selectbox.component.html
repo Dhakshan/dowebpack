@@ -1,0 +1,20 @@
+<!--// 
+src as a object input to play this control
+-->
+<div class="sb sb-{{src.theme||'white'}} rounded" [ngClass]="(src.sb.show)?src.sb.showclass:''" (mouseout)="src.sb.mouseout($event,src)">
+    <label class="sb-input">
+        <input class="form-control" [attr.id]="src.id" [(title)]="src.sb.value" [(value)]="src.sb.value" [placeholder]="src.placeholder||'Select'" (mouseover)="src.sb.watch=true;" (keyup)="src.sb.keyup($event,src)"  autocomplete="off"/>
+        <button type="button" class="sb-button rounded sb-caret" (click)="src.sb.dropDown($event,src)" (mouseover)="src.sb.watch=true;">
+            <span><span class="fa fa-angle-up"></span></span>
+            <span><span class="fa fa-angle-down"></span></span></button>
+        </label>
+    <div class="sb-option-list" *ngIf="src.sb.data && src.sb.data.option" (mouseover)="src.sb.mouseover($event,src)" (mouseout)="src.sb.mouseout($event,src)">
+        <ul>
+            <li class="sb-option-item" *ngFor="let opt of src.sb.filter(src.sb.data.option,src)">
+                <label class="sb-option" (click)="src.sb.optClick($event,opt,src)">
+                    {{opt.value}}
+                    </label>
+            </li>
+        </ul>
+    </div>
+</div>

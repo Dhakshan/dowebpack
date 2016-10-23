@@ -1,0 +1,11 @@
+<svg id="no_of_floor" data-name="no of floor" xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #111;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-1" d="M109,570V458H692V570H109Zm40-130V328H652V440H577V359.5H489V440H149Zm92-81H214v27h27V359Zm0,30H214v27h27V389Zm30-30H244v27h27V359Zm0,30H244v27h27V389ZM109,198H692V310H109V198Zm305-79v66H141V119H111V99H444v20H414ZM201,137H174v27h27V137Zm30,0H204v27h27V137ZM652,700H577V619.5H489V700H149V588H652V700ZM241,619H214v27h27V619Zm0,30H214v27h27V649Zm30-30H244v27h27V619Zm0,30H244v27h27V649Z"/>
+</svg>

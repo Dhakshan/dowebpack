@@ -1,0 +1,232 @@
+// <div class="spin-a"></div>
+//     <div class="spin-b"></div>
+//     <div class="spin-c"></div>
+.siteloader{
+    position: fixed;
+    top : 0; bottom : 0;
+    left:0; right : 0;
+    display : block;
+
+    .spin-a,.spin-b,.spin-c{
+        line-height: 0;
+        // padding : 1%;
+        display : inline-block;
+        text-align: center;
+        border-width:5px;
+        border-style : solid;
+        .border-radius(50%);
+        .animation_(spin 2s linear infinite);
+    }
+    .spin-a{
+        .spin-theme(@themeBg,@themeSecondaryBg,@white);
+    }
+    .spin-b{
+        .spin-theme(@themeBg,@white,@themeSecondaryBg);
+    }
+    .spin-c{
+        .spin-theme(@white,@themeSecondaryBg,@themeBg);
+    }
+}
+.spin-theme(@a,@b,@c){
+    border-top-color:@a;
+    border-left-color:@a;
+    border-bottom-color:@b;
+    border-right-color:@b;
+    background-color : @c;
+}
+.spinframes(){
+    from { .transform_(rotate(0deg)) }
+    to { .transform_(rotate(360deg)) }
+}
+@-webkit-keyframes spin {
+    .spinframes();
+}
+@-moz-keyframes spin {
+    .spinframes();
+}
+@keyframes spin {
+    .spinframes();
+}
+
+
+//tv loader
+// <div>
+//         <div class="dot theme dot-0"></div>
+//         <div class="dot theme dot-1"></div>
+//         <div class="dot theme dot-2"></div>
+//         <div class="dot theme dot-3"></div>
+//         <div class="dot theme dot-4"></div>
+//         <div class="dot theme dot-5"></div>
+//     </div>
+.dot {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - 1rem);
+    background: #E5E5E5;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.15);
+    &.theme{
+        background-color : @themeBg;
+    }
+    &.secondary{
+        background-color : @themeSecondaryBg;
+    }
+}
+
+.dot-2 {
+    animation: animate-to-2 1.5s infinite;
+}
+
+.dot-3 {
+    animation: animate-to-3 1.5s infinite;
+}
+
+.dot-1 {
+    animation: animate-to-1 1.5s infinite;
+}
+
+.dot-4 {
+    animation: animate-to-4 1.5s infinite;
+}
+.dot-0 {
+    animation: animate-to-0 1.5s infinite;
+}
+.dot-5 {
+    animation: animate-to-5 1.5s infinite;
+}
+.dot-animte-2-3(@a,@b,@c,@d){
+    25%,
+    75% {
+        .transform_(translateX(@a) scale(@b));
+    }
+    95% {
+        .transform_(translateX(@c) scale(@d));
+    }
+}
+@-webkit-keyframes animate-to-2 {
+    .dot-animte-2-3(-1.5rem,0.75,0rem,1);   
+}
+@-moz-keyframes animate-to-2 {
+    .dot-animte-2-3(-1.5rem,0.75,0rem,1);   
+}
+@keyframes animate-to-2 {
+    .dot-animte-2-3(-1.5rem,0.75,0rem,1);   
+}
+
+@-webkit-keyframes animate-to-3 {
+    .dot-animte-2-3(1.5rem,0.75,0rem,1);
+}
+@-moz-keyframes animate-to-3 {
+    .dot-animte-2-3(1.5rem,0.75,0rem,1);
+}
+@keyframes animate-to-3 {
+    .dot-animte-2-3(1.5rem,0.75,0rem,1);
+}
+
+.dot-animte-1-4(@a,@b,@c,@d,@e,@f){
+    25% {
+        .transform_(translateX(@a) scale(@b));
+    }
+    50%,
+    75% {
+        .transform_(translateX(@c) scale(@d));
+    }
+    95% {
+        .transform_(translateX(@e) scale(@f));
+    }
+}
+@-webkit-keyframes animate-to-1 {
+    .dot-animte-1-4(-1.5rem,0.75,-4.5rem,0.6,0rem,1);
+}
+@-moz-keyframes animate-to-1 {
+    .dot-animte-1-4(-1.5rem,0.75,-4.5rem,0.6,0rem,1);
+}
+@keyframes animate-to-1 {
+    .dot-animte-1-4(-1.5rem,0.75,-4.5rem,0.6,0rem,1);
+}
+
+@-webkit-keyframes animate-to-4 {
+    .dot-animte-1-4(1.5rem,0.75,4.5rem,0.6,0rem,1);
+}
+@-moz-keyframes animate-to-4 {
+    .dot-animte-1-4(1.5rem,0.75,4.5rem,0.6,0rem,1);
+}
+@keyframes animate-to-4 {
+    .dot-animte-1-4(1.5rem,0.75,4.5rem,0.6,0rem,1);
+}
+.dot-animte-0-5(@a,@b,@c,@d,@e,@f,@g,@h){
+    25% {
+        .transform_(translateX(@a) scale(@b));
+    }
+    50%{
+        .transform_(translateX(@c) scale(@d));
+    }
+    75% {
+        .transform_(translateX(@e) scale(@f));
+    }
+    95% {
+        .transform_(translateX(@g) scale(@h));
+    }
+}
+@-webkit-keyframes animate-to-0 {
+    .dot-animte-0-5(-1.5rem,0.75,-4.5rem,0.6,-7.5rem,0.5,0rem,1);
+}
+@-moz-keyframes animate-to-0 {
+    .dot-animte-0-5(-1.5rem,0.75,-4.5rem,0.6,-7.5rem,0.5,0rem,1);
+}
+@keyframes animate-to-0 {
+    .dot-animte-0-5(-1.5rem,0.75,-4.5rem,0.6,-7.5rem,0.5,0rem,1);
+}
+@-webkit-keyframes animate-to-5 {
+    .dot-animte-0-5(1.5rem,0.75,4.5rem,0.6,7.5rem,0.5,0rem,1);
+}
+@-moz-keyframes animate-to-5 {
+    .dot-animte-0-5(1.5rem,0.75,4.5rem,0.6,7.5rem,0.5,0rem,1);
+}
+@keyframes animate-to-5 {
+    .dot-animte-0-5(1.5rem,0.75,4.5rem,0.6,7.5rem,0.5,0rem,1);
+}
+//tv loader
+
+//cross pattern
+
+.progress-loader-a{
+    line-height:0;
+    background: url(../images/base/cross-ptn-1.png) repeat left top;
+    display : block;
+    .animation_(progressMoveLoaderA 0.4s linear infinite);
+    &.and-b{
+        background: url(../images/base/cross-ptn-2.png) repeat left top;
+        .animation_(progressMoveLoaderB 0.4s linear infinite);
+    }
+}
+
+.progressMoveLoaderA(@start,@end){
+    0%{
+        background-position: @start top;
+    }
+    100%{
+        background-position : @end top;
+    }
+}
+@-webkit-keyframes progressMoveLoaderA{
+    .progressMoveLoaderA(0px,20px);
+}
+@-moz-keyframes progressMoveLoaderA{
+    .progressMoveLoaderA(0px,20px);
+}
+@keyframes progressMoveLoaderA{
+    .progressMoveLoaderA(0px,20px);
+}
+
+@-webkit-keyframes progressMoveLoaderB{
+    .progressMoveLoaderA(0px,32px);
+}
+@-moz-keyframes progressMoveLoaderB{
+    .progressMoveLoaderA(0px,32px);
+}
+@keyframes progressMoveLoaderB{
+    .progressMoveLoaderA(0px,32px);
+}

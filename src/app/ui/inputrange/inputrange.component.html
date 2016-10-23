@@ -1,0 +1,29 @@
+<div class="input-range ir-{{src.theme||'white rounded'}} {{src.square}}">
+    <div class="row">
+        <div class="{{src.grid||'grid6-xsm'}}">
+            <label class="ir-input ir-start">
+                <button class="ir-button ir-left" type="button" (click)="src.irange.increment($event,'min',src)">
+                    <span class="ir-button-icon">
+                        <span class="fa fa-angle-left" *ngIf="!(src.square)"></span>
+                        <span class="fa fa-angle-up" *ngIf="(src.square)"></span>
+                    </span>
+                    <span class="ir-button-text" *ngIf="(!src.square)">Min</span>
+                </button>
+                <input class="form-control" type="text" [attr.id]="src.id.min" [(value)]="src.irange.data.value.min" [attr.placeholder]="src.placeholder.min" (keyup)="src.irange.minkeyup($event,src)" (blur)="src.irange.minblur($event,src)" autocomplete="off" />
+                
+            </label>
+        </div>
+        <div class="{{src.grid||'grid6-xsm'}}">
+            <label class="ir-input ir-end">
+                <input class="form-control" type="text" [attr.id]="src.id.max" [(value)]="src.irange.data.value.max" [attr.placeholder]="src.placeholder.max" (keyup)="$event.target.value=src.irange.data.value.max" (blur)="$event.target.value=src.irange.data.value.max"  autocomplete="off" />
+                <button class="ir-button ir-right" (click)="src.irange.increment($event,'max',src)" type="button">
+                    <span class="ir-button-text" *ngIf="(!src.square)">Max</span>
+                    <span class="ir-button-icon">
+                        <span class="fa fa-angle-right" *ngIf="!(src.square)"></span>
+                        <span class="fa fa-angle-down" *ngIf="(src.square)"></span>
+                    </span>
+                </button>
+            </label>
+        </div>
+    </div>
+</div>

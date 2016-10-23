@@ -1,0 +1,61 @@
+.flyout{
+    max-height:100%;
+    margin: 0 auto;
+    width : 100%;
+    position: fixed;
+    margin-top:-50%;    
+    top:0;
+    height:1px;
+    overflow-y : hidden;
+    &,.inner{
+        .transition_(all 1s ease) !important;
+    }
+    .inner{
+        .box-shadow(0px 3px 10px fade(@black,30));
+        background-color : @white;
+        color : @themeSecondaryBg;
+        position: relative;
+        margin-top:-100%;
+    }
+    .flyout-close{
+        padding : 20px;
+        display : block;
+        position:absolute;
+        right:0;
+        top:0;
+        text-align: center;
+        border-color : #eee;
+        border-style: solid;
+        border-width: 0 1px 1px;
+        .fa{
+            &,&:before{
+                line-height: 0;
+            }
+        }
+        &,&:focus{
+            background-color : @white;
+            color : @themeSecondaryBg;
+        }
+        &:hover{
+            background-color : @themeBg;
+            color : @white;
+            border-color : transparent;
+        }
+    }
+    .flyout-open();
+}
+.home-header-theme,.home-header-secondary,.home-header-white{
+    .flyout{
+        .flyout-open();
+    }
+}
+.flyout-open(){
+    &.flyout-o{
+        height : 100%;
+        overflow-y: visible;
+        margin-top:0%;
+        .inner{
+            margin-top:0;
+        }
+    }
+}

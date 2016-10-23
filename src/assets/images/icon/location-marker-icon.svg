@@ -1,0 +1,82 @@
+<svg id="search_locations" data-name="search locations" xmlns="http://www.w3.org/2000/svg" width="119" height="126" viewBox="0 0 119 126">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #09ca90;
+        stroke: #111;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <path class="cls-2" d="M32,116L81,40"/>
+    <path class="cls-2" d="M56,81L33,82l6-12H8"/>
+    <path class="cls-2" d="M34,82L26,96H45"/>
+    <path class="cls-2" d="M111,40H72L68,10"/>
+    <path class="cls-2" d="M72,33L19,11"/>
+    <path class="cls-2" d="M58,27l8-11"/>
+    <path class="cls-2" d="M54,15l9,5"/>
+    <path class="cls-2" d="M40,32L26,22l12-4"/>
+    <path class="cls-2" d="M32,40L14,21l15-7"/>
+    <path class="cls-2" d="M14,21L8,11"/>
+    <path class="cls-2" d="M43,59L68,30"/>
+    <path class="cls-2" d="M24,95L16,69"/>
+    <path class="cls-2" d="M61,71l51,2"/>
+    <path class="cls-2" d="M55,80l23,3V97l19,5,3,14"/>
+    <path class="cls-2" d="M77,83h34"/>
+    <path class="cls-2" d="M78,83l3-11"/>
+    <path class="cls-2" d="M74,51l37,13"/>
+    <path class="cls-2" d="M92,57l7-18"/>
+    <path class="cls-2" d="M81,39l30-28"/>
+    <path class="cls-2" d="M90,30L79,11"/>
+    <path class="cls-2" d="M101,22L99,39"/>
+    <path class="cls-2" d="M40,104l9,12"/>
+    <path class="cls-2" d="M8,25L23,40h8l8-8,14-7"/>
+    <path class="cls-2" d="M22,40L20,57H7"/>
+    <path class="cls-2" d="M19,57L40,70"/>
+    <path class="cls-2" d="M19,57l49,4"/>
+    <path class="cls-2" d="M40,70l22,1"/>
+    <path class="cls-2" d="M25,97L7,104"/>
+  </g>
+  <g id="map_marker" data-name="map marker">
+    <g id="marker_copy_2" data-name="marker copy 2">
+      <path class="cls-3" d="M77,44A17,17,0,0,1,94,61c0,9.389-17,26-17,26S60,70.389,60,61A17,17,0,0,1,77,44Z"/>
+      <circle class="cls-4" cx="77" cy="61" r="8"/>
+    </g>
+    <g id="marker_copy_3" data-name="marker copy 3">
+      <path class="cls-3" d="M44,37.75a8.5,8.5,0,0,1,8.5,8.5c0,4.694-8.5,13-8.5,13s-8.5-8.306-8.5-13A8.5,8.5,0,0,1,44,37.75Z"/>
+      <circle class="cls-4" cx="44" cy="46.25" r="4"/>
+    </g>
+    <g id="marker_copy_4" data-name="marker copy 4">
+      <path class="cls-3" d="M92,15.75a8.5,8.5,0,0,1,8.5,8.5c0,4.694-8.5,13-8.5,13s-8.5-8.306-8.5-13A8.5,8.5,0,0,1,92,15.75Z"/>
+      <circle class="cls-4" cx="92" cy="24.25" r="4"/>
+    </g>
+    <g id="marker_copy_5" data-name="marker copy 5">
+      <path class="cls-3" d="M97,85.75a8.5,8.5,0,0,1,8.5,8.5c0,4.695-8.5,13-8.5,13s-8.5-8.306-8.5-13A8.5,8.5,0,0,1,97,85.75Z"/>
+      <circle class="cls-4" cx="97" cy="94.25" r="4"/>
+    </g>
+    <g id="marker_copy_6" data-name="marker copy 6">
+      <path class="cls-3" d="M22,73.75a8.5,8.5,0,0,1,8.5,8.5c0,4.694-8.5,13-8.5,13s-8.5-8.306-8.5-13A8.5,8.5,0,0,1,22,73.75Z"/>
+      <circle class="cls-4" cx="22" cy="82.25" r="4"/>
+    </g>
+  </g>
+</svg>

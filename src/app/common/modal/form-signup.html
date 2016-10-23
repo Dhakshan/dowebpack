@@ -1,0 +1,65 @@
+<!--//modal reference
+    src.something...
+-->
+<div *ngIf="src">
+	<form class="pad20px" (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+		<div class="row">
+			<div class="grid12-xs">
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Name</label>
+					<input autocomplete="off" type="text" class="form-control" ngControl="name" id="name" placeholder="Name" value="" />
+				</div>
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Email ID</label>
+					<input autocomplete="off" type="text" class="form-control" ngControl="email" id="email" placeholder="Email id" value="" />
+				</div>
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Mobile No</label>
+					<input autocomplete="off" type="text" class="form-control" ngControl="mobile" id="mobile" placeholder="Mobile no" value=""
+					/>
+				</div>
+				<div class="control-set input-a grey-to-white rounded">
+					<label class="form-label sr-label">Password</label>
+					<input autocomplete="off" type="password" class="form-control" ngControl="password" id="password" placeholder="Password"
+						value="" />
+				</div>
+				<div class="control-set input-a grey-to-white rounded input-captcha-set">
+					<label class="form-label sr-label">Password</label>
+					<div class="row row-as-table-xsm row-nopad no-padding stretch">
+						<div class="grid8-xsm">
+							<input autocomplete="off" type="text" class="form-control" ngControl="captcha" id="captcha" placeholder="Type the following key"
+								value="" />
+						</div>
+						<div class="grid4-xsm">
+							<div class="input-captcha rounded">
+								<div class="input-captcha-bg">
+									<img src="assets/images/captcha/ptn/ptn-1.jpg" alt="pattern" />
+								</div>
+								<a href="#" class="input-captcha-reload circle"><span class="fa fa-refresh"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="control-set">
+					<div class="row row-as-table-xsm center">
+						<div class="grid6-xsm nowrap">
+							<div class="checkbox white no-padding">
+								<label class="" [attr.for]="iagree">I Agree,</label>
+								<input type="checkbox" autocomplete="off" ngControl="iagree" class="form-control" id="iagree" value="y" #iagree>
+								<span class="checkbox-square" [ngClass]="(iagree.checked)?'active':''"></span></div>
+						</div>
+						<div class="grid6-xsm"><a href="#" class="link theme border-true" (click)="src._this.modalOpen({event:$event,name:'viewAgreementModal',show:true})">View Agreement</a></div>
+					</div>
+				</div>
+				<div class="control-set">
+					<p class="margin-y20px">
+						<button type="submit" class="button theme theme-white rounded medium stretch">Create Account</button>
+					</p>
+					<p class="text-center">
+						Already have an account? <a href="#" class="link theme" (click)="src._this.modalOpen({event:$event,name:'loginModal',show:true,other:false})">Sign In</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

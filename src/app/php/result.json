@@ -1,0 +1,554 @@
+{
+    "data" : {
+        "result" : [{
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr7056",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "14,500",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "individual-house-1.jpg"
+            }],
+            "propFromPackage" : true,
+            "viewed" : 5,
+            "interested" : 3,
+            "shortlisted" : 15,
+            "ref" : "dopr7056",
+            "id" : "0",
+            "updated-date" : "15 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        },{
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr5911",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "10,000",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "individual-house-2.jpg"
+            }],
+            "viewed" : 12,
+            "interested" : 6,
+            "shortlisted" : 12,
+            "ref" : "dopr5911",
+            "id" : "0",
+            "updated-date" : "27 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        },
+        {
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr5912",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "11,000",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "residentials-house-1.jpg"
+            }],
+            "viewed" : 12,
+            "interested" : 6,
+            "shortlisted" : 7,
+            "ref" : "dopr5912",
+            "id" : "1",
+            "updated-date" : "20 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        },{
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr5913",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "11,000",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "residentials-house-2.jpg"
+            }],
+            "viewed" : 25,
+            "interested" : 10,
+            "shortlisted" : 5,
+            "ref" : "dopr5913",
+            "id" : "2",
+            "updated-date" : "18 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        },{
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr6452",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "12,000",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "individual-house-1.jpg"
+            }],
+            "viewed" : 5,
+            "interested" : 3,
+            "shortlisted" : 15,
+            "ref" : "dopr6452",
+            "id" : "0",
+            "updated-date" : "15 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        },{
+            "view" : "/property/chennai/anna-nagar/rent/residential/individual-house/1bhk/10000/dopr6012",
+            "title" : "1 BHK Residential Individual House for Rent",
+            "location" : "Anna Nagar, Chennai",
+            "price" : "11,500",
+            "propertyfor" : "rent",
+            "description" : "1 RK Residential Individual House for Rent in Ashok Nagar, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "photo" : [{
+                "img" : "individual-house-2.jpg"
+            }],
+            "propFromPackage" : true,
+            "viewed" : 5,
+            "interested" : 3,
+            "shortlisted" : 15,
+            "ref" : "dopr6012",
+            "id" : "0",
+            "updated-date" : "15 Sep 2016",
+            "prop-overview-limit" : 8, "prop-overview-limit-grid" : 3,
+            "prop-overview" : [{
+                "icon" : "area-sqft.svg",
+                "label" : "Area",
+                "value" : "500 Sqft.,"
+            },{
+                "icon" : "bedroom.svg",
+                "label" : "Bedroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom.svg",
+                "label" : "Bathroom",
+                "value" : "1"
+            },{
+                "icon" : "bathroom-type.svg",
+                "label" : "Bath Type",
+                "value" : "Western"
+            },{
+                "icon" : "no-of-floor.svg",
+                "label" : "No. Floor",
+                "value" : "-"
+            },{
+                "icon" : "property-on-floor.svg",
+                "label" : "Prop., Floor",
+                "value" : "-"
+            },{
+                "icon" : "floor-type.svg",
+                "label" : "Floor Type",
+                "value" : "Tiles"
+            },{
+                "icon" : "furnishing.svg",
+                "label" : "Furnishing",
+                "value" : "Unfurnished"
+            },{
+                "icon" : "ready-to-occupy.svg",
+                "label" : "Availability",
+                "value" : "Any Time"
+            },{
+                "icon" : "age-of-house.svg",
+                "label" : "Prop., Age",
+                "value" : "5-10 Year"
+            },{
+                "icon" : "security-deposit.svg",
+                "label" : "Advance",
+                "value" : "25,000 INR"
+            },{
+                "icon" : "deposit-negotiable.svg",
+                "label" : "Negotiable",
+                "value" : "-"
+            },{
+                "icon" : "living-type.svg",
+                "label" : "Prop., For",
+                "value" : "Any One"
+            },{
+                "icon" : "parking.svg",
+                "label" : "Parking",
+                "value" : "2 Wheller"
+            },{
+                "icon" : "facing.svg",
+                "label" : "Direction",
+                "value" : "North"
+            }],
+            "amenities-overview" : [{
+                "icon" : "metro-water.svg",
+                "label" : "Metro Water",
+                "value" : "Yes"
+            },{
+                "icon" : "water-tank.svg",
+                "label" : "Water Tank",
+                "value" : "Yes"
+            },{
+                "icon" : "bike-parking.svg",
+                "label" : "2 Wheeler",
+                "value" : "Yes"
+            }]
+        }]
+    }
+}

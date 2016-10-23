@@ -1,0 +1,6 @@
+<div *ngIf="cs && cs.g && cs.g.toaster" class="common-form-error radius1x {{cs.g.toaster.default}} {{cs.g.toaster.class}}">
+    <div class="float-icon-text form-error error">
+        <span class="fi-icon pad-l10px"><span class="fa fa-info"></span></span>
+        <div class="fi-label" [innerHTML]="cs.g.toaster.msg"></div>
+    </div>
+</div>

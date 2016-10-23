@@ -1,0 +1,35 @@
+//used in footer most view property
+.list-v1{
+    .list-v1-link{
+        display : block;
+        position: relative;
+        @listimgsize : 70px;
+        margin : 10px 0;
+        .list-v1-img,.list-v1-label{
+            display : table-cell;
+            vertical-align: middle;
+        }
+        .list-v1-img{
+            width : @listimgsize;
+            border:3px solid @themeSecondaryBg;
+        }
+        .list-v1-label{
+            padding : 10px;
+        }
+        &,&:focus{
+            color : @themeSecondaryBg;
+        }
+        &:hover{
+            color : @white;
+            .list-v1-img{
+                border-color : @white;
+            }
+        }
+    }
+}
+// used in home location change..
+.citylist{
+    .label-checkbox{
+        margin-bottom: 20px;
+    }
+}

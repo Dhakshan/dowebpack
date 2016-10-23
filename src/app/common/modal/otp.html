@@ -1,0 +1,61 @@
+<!--//modal reference
+    src.something...
+-->
+<div class="" *ngIf="src">
+    <div class="row row-nopad no-padding row-as-table-sm stretch relative">
+        <div class="grid5-sm bg theme text-center">
+            <div class="pad30px">
+                <h4 class="lead h4 margin-b20px">Mobile Verification</h4>
+                <div class="">
+                    <p class="margin-b20px">
+                        Please give a missed call from your registered mobile number
+                    </p>
+                    <p>
+                        Missed call to
+                    </p>
+                    <p class=" lead h5">
+                        <a href="tel:+91 85534 99907" class="link white-alt border-true link-dashed" title="+91 85534 99907">+91 85534 99907</a>
+                    </p>
+                    <p class="pad-y40px">
+                        Next
+                    </p>
+                    <p class=" lead h5">
+                        <a href="#" class="link white-alt border-true link-dashed" (click)="src._this.missedCallControl($event,src)">Click Here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="grid7-sm relative">
+            <div class="left-curve-bg">
+                <span class="lcb-text">Or</span>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <button type="button" class="modal-close" (click)="src._this.modalClose({event:$event,name:src.name,show:false,other:false})">
+                        <span class="modal-close-icon">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pad30px margin-x10px">
+                <p class="pad-y40px text-center">
+                    Please enter the OTP as received in your registered mobile number to 994xxxxx56
+                </p>
+                <form class=""  (submit)="src.submit($event,src)" (ngFormModel)="src.form">
+                    <div class="control-set">
+                        <label class="form-label text-center">
+                                OTP
+                            <small class="block">(One Time Password)</small>
+                        </label>
+                        <div class="input-btn-group white">
+                            <input autocomplete="off" type="text" class="form-control" ngControl="otp"  id="otp" placeholder="OTP Number" value="" (blur)="src.formBlur(src,'otp')" />
+                            <button class="button theme theme-alt rounded"><span class="pad-x10px">Verify</span></button>
+                        </div>
+                    </div>
+                </form>
+                <p class="pad-y40px text-center">
+                    <a href="#" class="link theme">Resend OTP</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

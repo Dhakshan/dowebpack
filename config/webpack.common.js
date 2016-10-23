@@ -24,8 +24,8 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
-  baseUrl: '/',
+  title: 'DirectOwners.com',
+  baseUrl: '',
   isDevServer: helpers.isWebpackDevServer()
 };
 
@@ -140,8 +140,15 @@ module.exports = function (options) {
         /* File loader for supporting images, for example, in CSS files.
          */
         {
-          test: /\.(jpg|png|gif)$/,
+          test: /\.(jpg|png|gif|svg)$/,
           loader: 'file'
+        },
+        { 
+          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+          loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+        { 
+          test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+          loader: "file-loader"
         },
 
       ],

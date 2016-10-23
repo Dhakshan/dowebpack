@@ -1,0 +1,645 @@
+{
+    "data": {
+        "formField": {
+            "choosetype": {
+                "label": "Chooste Type",
+                "type": "radio",
+                "fields": [
+                    {
+                        "value": "Rent",
+                        "label": "Rent",
+                        "name": "p_type",
+                        "id": "p_type_0",
+                        "title": "Choose Rent",
+                        "checked": true,
+                        "type": "radio"
+                    },
+                    {
+                        "value": "Sale",
+                        "label": "Sale",
+                        "name": "p_type",
+                        "id": "p_type_0",
+                        "title": "Choose Sale",
+                        "checked": false,
+                        "type": "radio"
+                    }
+                ]
+            },
+            "choosefor": {
+                "label": "Choose Property For",
+                "type": "radio",
+                "fields": [
+                    {
+                        "value": "Residential",
+                        "label": "Residential",
+                        "name": "p_for",
+                        "id": "p_for_0",
+                        "title": "Choose Residential",
+                        "checked": "checked",
+                        "type": "radio"
+                    },
+                    {
+                        "value": "Commercial",
+                        "label": "Commercial",
+                        "name": "p_for",
+                        "id": "p_for_1",
+                        "title": "Choose Commercial",
+                        "checked": "",
+                        "type": "radio"
+                    },
+                    {
+                        "value": "Land",
+                        "label": "Land",
+                        "name": "p_for",
+                        "id": "p_for_2",
+                        "title": "Choose Land",
+                        "checked": "",
+                        "type": "radio"
+                    }
+                ]
+            },
+            "category": {
+                "fields": [
+                    {
+                        "value": "Individual House",
+                        "selected": true
+                    },
+                    {
+                        "value": "Apartments",
+                        "selected": false
+                    },
+                    {
+                        "value": "Villa",
+                        "selected": false
+                    },
+                    {
+                        "value": "Others",
+                        "selected": false
+                    },
+                    {
+                        "value": "All",
+                        "selected": false
+                    }
+                ]
+            },
+            "bhk": {
+                "fields": [
+                    {
+                        "value": "1 BHK",
+                        "selected": true
+                    },
+                    {
+                        "value": "2 BHK",
+                        "selected": false
+                    },
+                    {
+                        "value": "3 BHK",
+                        "selected": false
+                    },
+                    {
+                        "value": "3 Above",
+                        "selected": false
+                    }
+                ]
+            },
+            "furnish": {
+                "fields": [
+                    {
+                        "value": "Unfurnished",
+                        "selected": false
+                    },
+                    {
+                        "value": "Furnished",
+                        "selected": false
+                    },
+                    {
+                        "value": "Semi Furnished",
+                        "selected": false
+                    }
+                ]
+            },
+            "bathroom": {
+                "fields": {
+                    "range": 1,
+                    "max": 5,
+                    "min": 1
+                }
+            },
+            "bathtype": {
+                "fields": [
+                    {
+                        "value": "Western",
+                        "selected": false
+                    },
+                    {
+                        "value": "Regular",
+                        "selected": false
+                    },
+                    {
+                        "value": "Any Type",
+                        "selected": false
+                    }
+                ]
+            },
+            "familytype": {
+                "fields": [
+                    {
+                        "value": "Family",
+                        "selected": false
+                    },
+                    {
+                        "value": "Bachelor",
+                        "selected": false
+                    },
+                    {
+                        "value": "Any Type",
+                        "selected": false
+                    }
+                ]
+            },
+            "facing": {
+                "fields": [
+                    {
+                        "value": "North",
+                        "selected": false
+                    },
+                    {
+                        "value": "East",
+                        "selected": false
+                    },
+                    {
+                        "value": "West",
+                        "selected": false
+                    },
+                    {
+                        "value": "South",
+                        "selected": false
+                    },
+                    {
+                        "value": "Any",
+                        "selected": "selected"
+                    }
+                ]
+            },
+            "parking": {
+                "fields": [
+                    {
+                        "id": 0,
+                        "value": "Car",
+                        "selected": false
+                    },
+                    {
+                        "id": 1,
+                        "value": "Bike",
+                        "selected": false
+                    },
+                    {
+                        "id": 2,
+                        "value": "Any",
+                        "selected": false
+                    }
+                ]
+            },
+            "area": {
+                "fields": {
+                    "min": "0",
+                    "max": "10000",
+                    "start": "",
+                    "end": ""
+                }
+            },
+            "location": {
+                "label": "Enter Location",
+                "type": "autosuggest",
+                "fields": []
+            },
+            "budget": {
+                "label": "Enter Budget",
+                "type": "inputminmax",
+                "fields": []
+            },
+            "paymentgateway": {
+                "fields": [
+                    {
+                        "value": "Payumoney",
+                        "label": "<span class='pay-you-money rb-icon'><img src='./app/assets/images/figure/payumoney.jpg' alt='Payumoney' /></span>",
+                        "name": "pg",
+                        "id": "pg_0",
+                        "title": "Pay u money gateway",
+                        "checked": "checked",
+                        "type": "radio"
+                    },
+                    {
+                        "value": "EBS",
+                        "label": "<span class='ebs  rb-icon'><img src='./app/assets/images/figure/ebs.jpg' alt='Payumoney' /></span>",
+                        "name": "pg",
+                        "id": "pg_1",
+                        "title": "EBS gateway",
+                        "type": "radio"
+                    }
+                ]
+            }
+        },
+        "suggestLocation": [
+            {
+                "value": "Anna Nagar",
+                "selected": true
+            },
+            {
+                "value": "Abhirami puram",
+                "selected": true
+            },
+            {
+                "value": "Vadapalani"
+            },
+            {
+                "value": "Arumbakkam"
+            },
+            {
+                "value": "Mylapore"
+            },
+            {
+                "value": "Alwarpet"
+            },
+            {
+                "value": "K K Nagar"
+            }
+        ],
+        "budgetField": {
+            "control": false,
+            "addition": 5000,
+            "maxBudget": {
+                "amount": ""
+            }
+        },
+        "last24Hrs": {
+            "inProp": 256,
+            "inArray": [
+                "2",
+                "5",
+                "6"
+            ],
+            "outProp": 125,
+            "outArray": [
+                "1",
+                "2",
+                "5"
+            ]
+        },
+        "mostViewProp": [
+            {
+                "photo": "./app/assets/images/property/300x200/prop1.jpg",
+                "title": "Multi storey apartment for rent in chennai",
+                "url": "/search/multi-storey-apartment-for-rent"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop2.jpg",
+                "title": "Residential apartment for rent in chennai",
+                "url": "/search/residential-apartment-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop3.jpg",
+                "title": "Individual house for rent in chennai",
+                "url": "/search/individual-house-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop4.jpg",
+                "title": "Villa for rent in chennai",
+                "url": "/search/villa-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop5.jpg",
+                "title": "Office space for rent in chennai",
+                "url": "/property/office-space-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop6.jpg",
+                "title": "Shop for rent in chennai",
+                "url": "/search/shop-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop7.jpg",
+                "title": "Show room for rent in chennai",
+                "url": "/search/show-room-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop1.jpg",
+                "title": "Multi storey apartment for rent in chennai",
+                "url": "/search/multi-storey-apartment-for-rent"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop2.jpg",
+                "title": "Residential apartment for rent in chennai",
+                "url": "/search/residential-apartment-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop3.jpg",
+                "title": "Individual house for rent in chennai",
+                "url": "/search/individual-house-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop4.jpg",
+                "title": "Villa for rent in chennai",
+                "url": "/search/villa-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop5.jpg",
+                "title": "Office space for rent in chennai",
+                "url": "/property/office-space-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop6.jpg",
+                "title": "Shop for rent in chennai",
+                "url": "/search/shop-for-rent-in-chennai"
+            },
+            {
+                "photo": "./app/assets/images/property/300x200/prop7.jpg",
+                "title": "Show room for rent in chennai",
+                "url": "/search/show-room-for-rent-in-chennai"
+            }
+        ],
+        "footLinks": {
+            "sitelinks": [
+                {
+                    "url": "/about",
+                    "title": "About Us",
+                    "menu": "About Us"
+                },
+                {
+                    "url": "/terms-and-conditions",
+                    "title": "Terms & Conditions",
+                    "menu": "Terms & Conditions"
+                },
+                {
+                    "url": "/privacy-and-policy",
+                    "title": "Privacy",
+                    "menu": "Privacy"
+                },
+                {
+                    "url": "/testimonials",
+                    "title": "Testimonials",
+                    "menu": "Testimonials"
+                },
+                {
+                    "url": "/faq",
+                    "title": "FAQ",
+                    "menu": "FAQ"
+                }
+            ],
+            "subscribers": [
+                {
+                    "url": "javascript:void(0)",
+                    "title": "Sign Up",
+                    "menu": "Sign Up",
+                    "event": "signupModal"
+                },
+                {
+                    "url": "javascript:void(0)",
+                    "title": "Sign In",
+                    "menu": "Sign In",
+                    "event": "loginModal"
+                }
+            ],
+            "forpost": [
+                {
+                    "url": "/post-your-property",
+                    "title": "Post Your Property",
+                    "menu": "Post Your Property"
+                },
+                {
+                    "url": "/post-your-requirement",
+                    "title": "Post Your Requirement",
+                    "menu": "Post Requirement"
+                }
+            ],
+            "buyerOwners": [
+                {
+                    "url": "/how-it-works",
+                    "title": "How its works?",
+                    "menu": "How its works?"
+                },
+                {
+                    "url": "/why-should-i-pay",
+                    "title": "Why Should I, Pay?",
+                    "menu": "Why Should I, Pay?"
+                },
+                {
+                    "url": "javascript:void(0);",
+                    "title": "Refer a Friend",
+                    "menu": "Refer a Friend",
+                    "event": "referAFriendModal"
+                },
+                {
+                    "url": "/claim-gift-voucher",
+                    "title": "Claim Gift Voucher",
+                    "menu": "Claim Gift Voucher"
+                }
+            ],
+            "explore": [
+                {
+                    "url": "/news",
+                    "title": "News",
+                    "menu": "News"
+                },
+                {
+                    "url": "/offers",
+                    "title": "Offers",
+                    "menu": "Offers"
+                }
+            ],
+            "socials": [
+                {
+                    "url": "http://www.facebook.com/directowners/",
+                    "title": "Facebook",
+                    "menu": "Facebook",
+                    "icon": "fa-facebook"
+                },
+                {
+                    "url": "https://twitter.com/thedirectowners",
+                    "title": "Twitter",
+                    "menu": "Twitter",
+                    "icon": "fa-twitter"
+                },
+                {
+                    "url": "https://www.linkedin.com/company/directowners",
+                    "title": "LinkedIn",
+                    "menu": "LinkedIn",
+                    "icon": "fa-linkedin"
+                },
+                {
+                    "url": "https://plus.google.com/+Directowners-infosolutions/posts",
+                    "title": "Google Plus",
+                    "menu": "Google Plus",
+                    "icon": "fa-google-plus"
+                },
+                {
+                    "url": "https://www.pinterest.com/directowners",
+                    "title": "Pinterest",
+                    "menu": "Pinterest",
+                    "icon": "fa-pinterest"
+                }
+            ]
+        },
+        "cityList": [
+            {
+                "value": "Chennai",
+                "selected": true
+            }
+        ],
+        "sortByList": {
+            "selected": "Relevance",
+            "fields": [
+                {
+                    "value": "Relevance",
+                    "url": "/property/relevance",
+                    "selected": true,
+                    "sort" : null
+                },
+                {
+                    "value": "Price Low",
+                    "url": "/property/price-low",
+                    "sort" : {
+                        "key" : "price", "order" : 1
+                    }
+                },
+                {
+                    "value": "Price High",
+                    "url": "/property/price-high",
+                    "sort" : {
+                        "key" : "price", "order" : -1
+                    }
+                },
+                {
+                    "value": "Latest",
+                    "url": "/property/latest",
+                    "sort" : {
+                        "key" : "updated-date", "order" : -1
+                    }
+                }
+            ]
+        },
+        "viewByList": {
+            "selected" : "List",
+            "fields": [
+                {
+                    "value": "List",
+                    "url": "/property/list",
+                    "selected": true
+                },
+                {
+                    "value": "Grid",
+                    "url": "/property/grid"                    
+                },
+                {
+                    "value": "Map",
+                    "url": "/property/map"
+                }
+            ]
+        },
+        "utilityBarItem": {
+            "common": [
+                {
+                    "responsive": "",
+                    "url": "",
+                    "icon": "fa fa-building-o",
+                    "text": "156845 Property from Direct Owners",
+                    "islink": false
+                },
+                {
+                    "responsive": "",
+                    "url": "/home",
+                    "icon": "fa fa-gift",
+                    "text": "Refer & Win a Gift Coupon",
+                    "islink": true
+                }
+            ]
+        },
+        "asidebar": {
+            "common": [
+                {
+                    "title": "Other Property Type",
+                    "key": "otherpropertytype",
+                    "items": [
+                        {
+                            "id" : "0",
+                            "title": "1 BHK Apartments",
+                            "location": "Anna Nagar, Chennai",
+                            "photo": "apartments-1.jpg",
+                            "selected" : true,
+                            "url" : "/property/chennai/anna-nagar/rent/residentials/apartments/"
+                        },
+                        {
+                            "id" : "1",
+                            "title": "1 BHK Apartments",
+                            "location": "Anna Nagar (West), Chennai",
+                            "photo": "apartments-2.jpg",
+                            "url" : "/property/chennai/anna-nagar/rent/residentials/apartments/"
+                        }
+                    ]
+                },
+                {
+                    "title": "Near by locations",
+                    "key": "nearbylocations",
+                    "items": [
+                        {
+                            "id" : "0",
+                            "title": "1 BHK Residentials",
+                            "location": "Mugappair, Chennai",
+                            "photo": "residentials-house-1.jpg",
+                            "selected" : true,
+                            "url" : "/property/chennai/mugappair/rent/residentials/individual-house/"
+                        },
+                        {
+                            "id" : "1",
+                            "title": "1 BHK Residentials",
+                            "location": "Nelson manickam road, Chennai",
+                            "photo": "residentials-house-2.jpg",
+                            "url" : "/property/chennai/mogappair/rent/residentials/individual-house/"
+                        }
+                    ]
+                },
+                {
+                    "title": "Other Locations",
+                    "key": "otherlocations",
+                    "items": [
+                        {
+                            "id" : "0",
+                            "title": "1 BHK Residentials",
+                            "location": "Mylapore, Chennai",
+                            "photo": "individual-house-1.jpg",
+                            "selected" : true,
+                            "url" : "/property/chennai/mylapore/rent/residentials/individual-house/"
+                        },
+                        {
+                            "id" : "1",
+                            "title": "1 BHK Residentials",
+                            "location": "Koyembedu, Chennai",
+                            "photo": "individual-house-2.jpg",
+                            "url" : "/property/chennai/koyembedu/rent/residentials/individual-house/"
+                        }
+                    ]
+                }
+            ]
+        },
+        "quickDashboard" : {
+            "packageName" : "Premium Package",
+            "list" : [{
+                "title" : "Click here to view matched property",
+                "value" : "50 prop., matched",
+                "url" : ""
+            },{
+                "title" : "Click here to view newly added property",
+                "value" : "25 Newly added",
+                "url" : ""
+            },{
+                "title" : "Click here to view interested property",
+                "value" : "5 Interested",
+                "url" : ""
+            },{
+                "title" : "Click here to view short listed property",
+                "value" : "10 Short listed",
+                "url" : ""
+            }]
+        }
+    }
+}

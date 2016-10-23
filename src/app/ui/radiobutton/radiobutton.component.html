@@ -1,0 +1,12 @@
+<div class="icheckbox-g">
+    <label *ngFor="let item of src.rb.data.option" class="icheckbox ic-{{src.theme||'white'}} ic-radio rounded" for="propFor1" [ngClass]="src.rb.setActive(item,src)" >
+        <div class="ic-icon">
+            <img src="assets/images/base/transparent.png" alt="" />
+            <div class="ic-circle">
+                &nbsp;
+            </div>
+        </div>
+        <div class="ic-label" [innerHtml]="item.label"></div>
+        <input [attr.type]="item.type" [attr.id]="item.id" name="propFor" [(value)]="item.value" [attr.title]="item.title||item.label" [attr.checked]="item.checked" (click)='src.rb.radioclick($event,src,item);' />
+    </label>
+</div>

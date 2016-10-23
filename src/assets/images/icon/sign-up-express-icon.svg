@@ -1,0 +1,31 @@
+<svg id="sign_up_icon" data-name="sign up icon" xmlns="http://www.w3.org/2000/svg" width="119" height="126" viewBox="0 0 119 126">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+        opacity: 0;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #111;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M10,98V4h93V86"/>
+  <path id="Shape_29_copy" data-name="Shape 29 copy" class="cls-1" d="M10,98v23H110V23h-9"/>
+  <path id="Rounded_Rectangle_717" data-name="Rounded Rectangle 717" class="cls-2" d="M55.654,16.564c8.754,0,11.062-4.35,11.062,10.986v4.806a11.062,11.062,0,0,1-22.123,0V27.55A11.024,11.024,0,0,1,55.654,16.564ZM48.226,44.028s-2.765,6.239-.411,6.57c0.962,0.135,6.59,2.8,7.649,2.8s6.012-2.673,7-2.8c2.519-.329.62-6.57,0.62-6.57,2.84,0,8.184,11.258,18.372,11.743L84,64.484A1.614,1.614,0,0,1,82.3,66H29.7A1.614,1.614,0,0,1,28,64.484l2.546-8.713C38.655,53.84,45.386,44.028,48.226,44.028Z"/>
+  <rect id="Rounded_Rectangle_718" data-name="Rounded Rectangle 718" class="cls-3" x="33" y="84" width="46" height="6" rx="3" ry="3"/>
+  <rect id="Rounded_Rectangle_718_copy_3" data-name="Rounded Rectangle 718 copy 3" class="cls-3" x="33" y="73" width="46" height="6" rx="3" ry="3"/>
+  <rect id="Rounded_Rectangle_718_copy" data-name="Rounded Rectangle 718 copy" class="cls-3" x="33" y="95" width="46" height="6" rx="3" ry="3"/>
+  <rect id="Rounded_Rectangle_718_copy_2" data-name="Rounded Rectangle 718 copy 2" class="cls-3" x="46" y="105" width="20" height="6" rx="3" ry="3"/>
+</svg>
